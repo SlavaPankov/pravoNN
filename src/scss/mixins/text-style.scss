@@ -1,0 +1,15 @@
+@mixin open-sans-18 {
+  font-family: 'OpenSans', 'Vollkorn', 'sans-serif';
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+  color: $black;
+}
+
+@mixin vollkron-28 {
+  font-family: 'Vollkorn', 'sans-serif';
+  font-size: 28px;
+  line-height: 39px;
+  font-weight: 400;
+  color: $black;
+}
