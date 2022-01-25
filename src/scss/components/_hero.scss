@@ -1,0 +1,34 @@
+.hero {
+  background: url('../img/hero-background.jpg') center center no-repeat transparent;
+  background-size: cover;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 236px 165px 237px 722px;
+  }
+
+  &__heading {
+    max-width: 553px;
+    margin-bottom: 29px;
+    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: 500;
+    color: $gold-dark;
+    text-transform: uppercase;
+  }
+
+  &__descr {
+    max-width: 374px;
+    margin-bottom: 29px;
+    @include open-sans-18;
+    color: $white;
+  }
+
+  &__btn {
+    margin-left: auto;
+    @include btn-primary;
+  }
+}

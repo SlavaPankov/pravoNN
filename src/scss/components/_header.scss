@@ -1,0 +1,44 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 35px;
+    padding-top: 13px;
+  }
+
+  &__nav {
+    margin-left: auto;
+  }
+
+  &__btn {
+    @include btn-primary;
+  }
+}
+
+.nav {
+  margin-right: 37px;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 37px;
+  }
+
+  &__link {
+    @include open-sans-18;
+    color: $white;
+  }
+}
+
+

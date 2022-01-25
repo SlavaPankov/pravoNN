@@ -1,0 +1,7 @@
+@mixin btn-primary {
+  padding: 13px 17px;
+  border: 1px solid $white;
+  border-radius: 3px;
+  @include open-sans-18;
+  color: white;
+}
