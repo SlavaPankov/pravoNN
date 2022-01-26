@@ -1,0 +1,22 @@
+<section class="request" id="request">
+  <div class="container request__container">
+    <h2 class="request__heading heading-reset">
+      <span class="request__text">
+        Готовы избавиться от долгов
+      </span> и начать новую жизнь — заполните форму, и мы с вами свяжемся!
+    </h2>
+    <form class="request__form form-main"  action="mail.php" method="post">
+      <label class="form-main__label form-main__label-name" for="name">
+        <input class="form-main__name form-main__input input-reset" type="text" name="name" id="name" placeholder="Ваше имя" data-validate-field="name">
+      </label>
+      <label class="form-main__label form-main__label-tel" for="tel">
+        <input class="form-main__tel form-main__input input-reset" type="tel" name="tel" id="tel" placeholder="+7 (999) 999 - 99 - 99" data-validate-field="tel">
+      </label>
+      <label class="form-main__checkbox custom-checkbox">
+        <input type="checkbox" class="custom-checkbox__field" data-validate-field="checkbox">
+        <span class="custom-checkbox__content">Я согласен с политикой обработки персональных данных</span>
+      </label>
+      <input class="form-main__submit btn-reset" type="submit" value="Отправить">
+    </form>
+  </div>
+</section>

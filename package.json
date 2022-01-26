@@ -19,6 +19,7 @@
     "@babel/preset-env": "^7.16.7",
     "babel-loader": "^8.2.3",
     "browser-sync": "^2.26.14",
+    "css-loader": "^6.5.1",
     "del": "^6.0.0",
     "editorconfig-checker": "^4.0.1",
     "gulp": "^4.0.2",
@@ -47,6 +48,7 @@
     "postcss": "^8.4.5",
     "postcss-scss": "^4.0.2",
     "sass": "^1.45.1",
+    "style-loader": "^3.3.1",
     "stylelint": "^14.2.0",
     "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-order": "^5.0.0",
@@ -54,8 +56,9 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "graph-modal": "^1.0.3",
-    "graph-tabs": "^1.0.0",
-    "simplebar": "^5.3.6"
+    "inputmask": "^5.0.7",
+    "jquery": "^3.6.0",
+    "just-validate": "^3.3.1",
+    "swiper": "^7.4.1"
   }
 }

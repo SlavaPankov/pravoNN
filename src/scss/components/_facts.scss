@@ -1,0 +1,119 @@
+.facts {
+  position: relative;
+
+  &::after {
+    content: 'Questions';
+    position: absolute;
+    right: 0;
+    top: 100px;
+    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+    font-size: 180px;
+    line-height: 250px;
+    font-weight: 500;
+    color: $blue-light;
+    z-index: -1;
+  }
+  
+  &__container {
+    padding-top: 30px;
+    padding-bottom: 110px;
+  }
+
+  &__subheading {
+    margin-bottom: 17px;
+    @include vollkron-28;
+    font-family: 'OpenSans', 'Vollkorn', 'sans-serif';
+    color: $gold;
+  }
+
+  &__heading {
+    margin-bottom: 55px;
+    @include heading-style;
+    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+  }
+}
+
+.accordion {
+  &__heading {
+    margin-bottom: 35px;
+    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+    font-size: 41px;
+    line-height: 58px;
+    font-weight: 400;
+    color: $black;
+  }
+
+  &__content {
+    // margin-bottom: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 75px;
+    padding-bottom: 70px;
+    background-color: $gray-transparent;
+    // transform: translateY(-35px);
+  }
+
+  &__content-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 36px 30px 75px;
+    @include vollkron-28;
+    font-weight: 500;
+    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+    background-color: $gray-transparent;
+  }
+
+  .mt-35 {
+    margin-top: 35px;
+  }
+
+  &__cross {
+    width: 40px;
+    height: 40px;
+    fill: #000;
+    stroke: #000;
+    transform: none;
+    transition: transform .3s ease-in-out;
+  }
+
+  &__list {
+    max-width: 477px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 1em;
+  }
+
+  &__item {
+    @include open-sans-18;
+  }
+
+  &__item-heading {
+    margin-bottom: 14px;
+    @include vollkron-28;
+    font-family: 'OpenSans', 'Vollkorn', 'sans-serif';
+    color: $gold-dark;
+  }
+}
+
+.list-positive, .list-negative {
+  margin-right: 67px;
+}
+
+.ui-accordion-header-icon {
+  display: none;
+}
+
+
+.ui-accordion-header-active .accordion__cross {
+  width: 40px;
+  height: 40px;
+  transform: rotateZ(135deg);
+}
+
+#accordion-1 {
+  margin-bottom: 35px;
+}

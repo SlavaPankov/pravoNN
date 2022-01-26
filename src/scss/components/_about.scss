@@ -24,14 +24,13 @@
     line-height: 279px;
     font-weight: 500;
     color: $blue-light;
-    // transform: translateY(45px);
     z-index: -1;
   }
 
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    column-gap: 35px;
+    column-gap: 30px;
     padding-top: 193px;
     padding-bottom: 171px;
   }
