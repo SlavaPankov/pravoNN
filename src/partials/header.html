@@ -1,11 +1,22 @@
 <header class="header">
   <div class="container header__container">
     <a class="logo">
-      <picture>
+      <picture class="logo__light">
         <source srcset="./img/logo-header.avif" type="image/avif">
         <source srcset="./img/logo-header.webp" type="image/webp">
-        <img loading="lazy" src="./img/logo-header.png" class="image header__logo" width="375" height="83" alt="Логотип">
+        <img loading="lazy" src="./img/logo-header.png" class="image header__logo" width="83" height="83" alt="Логотип">
       </picture>
+      <picture class="logo__dark visually-hidden">
+        <source srcset="./img/logo-dark.avif" type="image/avif">
+        <source srcset="./img/logo-dark.webp" type="image/webp">
+        <img loading="lazy" src="./img/logo-dark.png" class="image header__logo" width="83" height="83" alt="Логотип">
+      </picture>
+      <div class="logo__text heading-reset">
+        <p class="logo__title heading-reset">
+          Юридическая компания
+        </p>
+        Правовая защита
+      </div>
     </a>
     <nav class="nav header__nav" title="navigation">
       <ul class="nav__list list-reset">
@@ -15,7 +26,7 @@
         <li class="nav__item"><a href="#services" class="nav__link">
           Услуги
         </a></li>
-        <li class="nav__item"><a href="#rewives" class="nav__link">
+        <li class="nav__item"><a href="#reviews" class="nav__link">
           Отзывы
         </a></li>
         <li class="nav__item"><a href="#questions" class="nav__link">

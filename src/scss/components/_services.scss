@@ -32,11 +32,12 @@
 
   &__slide {
     width: 370px !important;
-    height: 378px !important;
+    height: 256px !important;
+    padding-top: 122px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   &__slide-1 {

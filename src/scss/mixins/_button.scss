@@ -4,4 +4,5 @@
   border-radius: 3px;
   @include open-sans-18;
   color: white;
+  transition: color .3s ease-in-out, border-color .3s ease-in-out;
 }
