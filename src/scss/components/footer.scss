@@ -1,0 +1,56 @@
+.footer {
+  background-color: $black-background;
+
+  &__container {
+    padding: 80px 48px;
+    padding-bottom: 37px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__copyright {
+    flex-basis: 100%;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 300;
+    color: $white;
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  &__link {
+    display: none;
+  }
+
+  &__tel {
+    display: block;
+    @include open-sans-18;
+    font-weight: 300;
+    color: $white
+  }
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+
+  &__item:not(:last-child) {
+    margin-right: 48px;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    fill: $white;
+  }
+}
+
+.tippy-content {
+  padding: 10px 20px !important;
+  background-color: $gray-background !important;
+}

@@ -1,0 +1,127 @@
+.contacts {
+  position: relative;
+  background: url('../img/contacts-background.webp') right top -61px no-repeat transparent;
+
+  &::after {
+    content: 'Call us';
+    position: absolute;
+    left: 0;
+    bottom: 350px;
+    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+    font-size: 180px;
+    line-height: 120px;
+    font-weight: 500;
+    color: $blue-light;
+    z-index: -1;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 178px;
+  }
+
+  &__heading {
+    grid-area: 1 / 1 / 2 / 4;
+    max-width: 245px;
+    margin-bottom: 31px;
+    @include heading-style;
+  }
+
+  &__address {
+    grid-area: 2 / 1 / 3 / 4;
+    max-width: 245px;
+    margin-bottom: 32px;
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 400;
+    font-style: normal;
+    color: $black;
+  }
+
+  &__country {
+    margin-bottom: 8px;
+    @include open-sans-18;
+  }
+
+  &__email {
+    grid-area: 3 / 1 / 4 / 3;
+    @include open-sans-18;
+  }
+
+  &__link {
+    grid-area: 2 / 5 / 3 / 9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__tel {
+    @include vollkron-28;
+    font-family: 'OpenSans', 'Vollkorn', 'sans-serif';
+  }
+
+  &__card {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+#map {
+  width: 100%;
+  height: 350px;
+}
+
+.popover {
+  display: block;
+  width: 300px;
+}
+
+.popover .close {
+  position: absolute;
+  left: 285px;
+  top: 1px;
+  z-index: 2;
+}
+
+.popover-title {
+  position: relative;
+  padding-top: 23px;
+  padding-bottom: 7px;
+  @include vollkron-28;
+  text-transform: uppercase;
+}
+
+.popover-content {
+  padding: 0 28px;
+  @include open-sans-18;
+}
+
+.popover-city {
+  padding-bottom: 34px;
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 400;
+  color: $black;
+}
+
+.btn {
+  margin-top: 10px;
+}
+
+.content-baloon {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.popover-title, .popover-content, .popover-city {
+  text-align: center;
+  background-color: rgba(231, 232, 233, 0.97);
+}
+
+.ymaps-2-1-79-ground-pane {
+  filter: grayscale(1);
+}
