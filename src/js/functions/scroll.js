@@ -48,6 +48,8 @@
 
   let position = pageYOffset;
   document.addEventListener('scroll', () => {
+    clearTimeout(timer);
+
     if (pageYOffset === 0) {
       scrollRemove()
     } else {
@@ -65,5 +67,9 @@
       header.header.classList.remove(scrollClass.hide);
       position = pageYOffset;
     }
+
+    const timer = setTimeout(function () {
+      header.header.classList.remove(scrollClass.hide);
+    }, 700)
   });
 })();

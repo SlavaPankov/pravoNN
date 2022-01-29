@@ -58,7 +58,7 @@
   "dependencies": {
     "inputmask": "^5.0.7",
     "jquery": "^3.6.0",
-    "just-validate": "^3.3.1",
+    "just-validate": "^3.3.3",
     "swiper": "^7.4.1",
     "tippy.js": "^6.3.7"
   }
