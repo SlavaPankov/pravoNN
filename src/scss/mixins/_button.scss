@@ -3,6 +3,13 @@
   border: 1px solid $white;
   border-radius: 3px;
   @include open-sans-18;
-  color: white;
-  transition: color .3s ease-in-out, border-color .3s ease-in-out;
+  color: $white;
+  transition: color .3s ease-in-out, border-color .3s ease-in-out, background-color .3s ease-in-out;
+
+  &:disabled {
+    background-color: #586683;
+    color: $white;
+    opacity: .3;
+    cursor: default;
+  }
 }

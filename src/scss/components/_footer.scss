@@ -2,7 +2,7 @@
   background-color: $black-background;
 
   &__container {
-    padding: 80px 48px;
+    padding: 40px 48px;
     padding-bottom: 37px;
     display: flex;
     flex-direction: row;
@@ -13,8 +13,8 @@
 
   &__copyright {
     flex-basis: 100%;
-    font-size: 15px;
-    line-height: 21px;
+    font-size: 12px;
+    line-height: 16px;
     font-weight: 300;
     color: $white;
     margin-top: 24px;
@@ -30,6 +30,15 @@
     @include open-sans-18;
     font-weight: 300;
     color: $white
+  }
+
+  &__offer {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300;
+    color: $white;
+    margin-top: 24px;
+    text-decoration: underline;
   }
 }
 

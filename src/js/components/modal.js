@@ -119,6 +119,8 @@ modalBtn.forEach(item => {
         xhr.send(formData);
 
         event.target.reset();
+        formBtn.textContent = 'Отправлено';
+        formBtn.setAttribute('disabled', 'disabled');
       }).onFail(() => {
         document.querySelectorAll('.just-validate-error-label').forEach(item => {
           console.log(item);

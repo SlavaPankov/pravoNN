@@ -5,4 +5,11 @@ $(document).ready(function(){
     heightStyle: "content",
     collapsible: true
   });
+  $('.agency__accordion').accordion({
+    heightStyle: "content",
+    collapsible: true,
+    active: false,
+  });
 })
+
+
