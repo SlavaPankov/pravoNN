@@ -15,22 +15,24 @@ validation
     {
       rule: 'minLength',
       value: 3,
+      errorMessage: 'Слишком короткое имя'
     },
     {
       rule: 'maxLength',
       value: 30,
+      errorMessage: 'Слишком длинное имя'
     },
     {
       rule: 'required',
       value: true,
-      errorMessage: 'Введите имя!'
+      errorMessage: 'Введите имя'
     }
   ])
   .addField('.input-tel', [
     {
       rule: 'required',
       value: true,
-      errorMessage: 'Телефон обязателен',
+      errorMessage: 'Введите телефон',
     },
     {
       rule: 'function',
@@ -62,52 +64,3 @@ validation
 
     event.target.reset();
   });
-// new window.JustValidate('.form-main', {
-//   rules: {
-//     tel: {
-//       required: true,
-//       function: () => {
-//         const phone = selector.inputmask.unmaskedvalue();
-//         return Number(phone) && phone.length === 10
-//       }
-//     },
-//     checkbox: {
-//       required: true
-//     }
-//   },
-//   colorWrong: '#ff3434',
-//   messages: {
-//     name: {
-//       required: 'Введите имя',
-//       minLength: 'Слишком короткое имя',
-//       maxLength: 'Слишком длинное имя',
-//     },
-//     tel: {
-//       required: 'Введите телефон',
-//       function: 'Некорректный ввод',
-//     },
-//     checkbox: {
-//       required: ' '
-//     }
-//   },
-//   submitHandler: function(thisForm) {
-//     let formData = new FormData(thisForm);
-//     console.log(formData);
-
-//     let xhr = new XMLHttpRequest();
-
-//     xhr.onreadystatechange = function () {
-//       if (xhr.readyState === 4) {
-//         if (xhr.status === 200) {
-//           console.log('Отправлено');
-//         }
-//       }
-//     }
-
-//     xhr.open('POST', 'mail.php', true);
-//     xhr.send(formData);
-
-//     thisForm.reset();
-//   }
-// });
-

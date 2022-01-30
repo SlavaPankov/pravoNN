@@ -1,0 +1,80 @@
+@mixin modal {
+  position: absolute;
+  top: 357px;
+  left: 50%;
+  max-width: 570px;
+  padding: 34px 70px;
+  border-radius: 3px;
+  background-color: $white;
+  transform: translateX(-50%);
+  z-index: 3;
+
+  &__heading {
+    @include heading-style;
+    margin-bottom: 10px;
+    line-height: 47px;
+    text-align: center;
+    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+  }
+
+  &__descr {
+    @include open-sans-18;
+    max-width: 251px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__agreement {
+    margin-bottom: 22px;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $black;
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $black;
+    text-decoration: underline;
+  }
+
+  &__cross {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 18px;
+    height: 18px;
+    stroke: $black;
+    cursor: pointer;
+  }
+
+  .modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__label {
+      position: relative;
+      width: 100%;
+      margin-bottom: 16px;
+    }
+
+    &__input {
+      width: 100%;
+      padding: 23.5px 36px;
+      background-color: $gray-transparent;
+    }
+
+    &__btn {
+      @include btn-primary;
+      padding: 23px 85px;
+      color: $black;
+      border-color: $black;
+    }
+  }
+  }

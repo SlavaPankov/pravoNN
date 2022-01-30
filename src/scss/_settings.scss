@@ -34,7 +34,9 @@ a {
 }
 
 .site-container {
+  position: relative;
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  transition: background-color .3s ease-in-out;
 }
 
 .is-hidden {
@@ -107,4 +109,29 @@ a {
   left: 0;
   top: 0;
   width: 100%;
+}
+
+.modal {
+  @include modal;
+}
+
+.modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: background-color .3s ease-in-out;
+  z-index: -1;
+}
+
+.modal-open {
+  background-color: rgba(0, 0, 0, .8);
+  z-index: 2;
+}
+
+.is-invalid {
+  top: 3px !important;
+  left: 10px !important;
 }
