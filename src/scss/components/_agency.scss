@@ -11,7 +11,7 @@
   &__heading {
     grid-area: 1 / 1 / 2 / 5;
     margin-bottom: 55px;
-    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+    @include ff-vollkorn;
     font-size: 28px;
     font-weight: 500;
     line-height: 39px;

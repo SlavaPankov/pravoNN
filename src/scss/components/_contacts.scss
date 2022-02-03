@@ -2,17 +2,29 @@
   position: relative;
   background: url('../img/contacts-background.webp') right top 10px no-repeat transparent;
 
+  @include tablet {
+    background: url('../img/contacts-background-1024.webp') right top 80px no-repeat transparent;
+  }
+
   &::after {
     content: 'Call us';
     position: absolute;
     left: 0;
     bottom: 350px;
-    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+    @include ff-vollkorn;
     font-size: 180px;
     line-height: 120px;
     font-weight: 500;
     color: $blue-light;
     z-index: -1;
+
+    @include tablet {
+      font-size: 110px;
+      line-height: 150px;
+      right: 0;
+      left: auto;
+      top: -40px;
+    }
   }
 
   &__container {
@@ -21,13 +33,23 @@
     column-gap: 30px;
     padding-top: 40px;
     padding-bottom: 178px;
+
+    @include tablet {
+      padding-bottom: 65px;
+      grid-template-columns: repeat(8, 1fr);
+    }
   }
 
   &__heading {
     grid-area: 1 / 1 / 2 / 4;
     max-width: 245px;
     margin-bottom: 31px;
+    @include ff-vollkorn;
     @include heading-style;
+
+    @include tablet {
+      grid-area: 1 / 1 / 2 / 5;
+    }
   }
 
   &__address {
@@ -49,6 +71,10 @@
   &__email {
     grid-area: 3 / 1 / 4 / 3;
     @include open-sans-18;
+
+    @include tablet {
+      margin-bottom: 17px;
+    }
   }
 
   &__link {
@@ -56,11 +82,15 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    @include tablet {
+      grid-area: 4 / 1 / 5 / 4;
+    }
   }
 
   &__tel {
     @include vollkron-28;
-    font-family: 'OpenSans', 'Vollkorn', 'sans-serif';
+    @include ff-open-sans;
   }
 
   &__card {

@@ -68,6 +68,7 @@
       width: 100%;
       padding: 23.5px 36px;
       background-color: $gray-transparent;
+      border-radius: 3px
     }
 
     &__btn {
@@ -77,4 +78,4 @@
       border-color: $black;
     }
   }
-  }
+}

@@ -8,11 +8,17 @@
 
   &__heading {
     margin-bottom: 69px;
-    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+    @include ff-vollkorn;
     font-size: 36px;
     line-height: 53px;
     font-weight: 500;
     color: $white;
+
+    @include tablet {
+      margin-bottom: 35px;
+      font-size: 26px;
+      line-height: 36px;
+    }
   }
 
   &__text {
@@ -44,6 +50,10 @@
   column-gap: 30px;
   row-gap: 16px;
 
+  @include tablet {
+    grid-template-columns: repeat(8, 1fr);
+    column-gap: 20px;
+  }
 
   &__input {
     width: 100%;
@@ -63,18 +73,20 @@
   }
 
   &__label-name {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-area: 1 / 1 / 2 / 6;
+
+    @include tablet {
+      grid-area: 1 / 1 / 2 / 4;
+    }
   }
 
   &__label-tel {
-    grid-column-start: 6;
-    grid-column-end: 11;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-area: 1 / 6 / 2 / 11;
     text-align: end;
+
+    @include tablet {
+      grid-area: 1 / 4 / 2 / 7;
+    }
   }
 
   &__submit {

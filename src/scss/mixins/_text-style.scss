@@ -4,6 +4,11 @@
   line-height: 25px;
   font-weight: 400;
   color: $black;
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 21px;
+  }
 }
 
 @mixin vollkron-28 {
@@ -12,4 +17,9 @@
   line-height: 39px;
   font-weight: 400;
   color: $black;
+
+  @include tablet {
+    font-size: 26px;
+    line-height: 36px;
+  }
 }

@@ -21,6 +21,10 @@
 
   &__btn {
     @include btn-primary;
+
+    @include tablet {
+      display: none;
+    }
   }
 
   &__logo {
@@ -31,6 +35,14 @@
 .nav {
   margin-right: 37px;
 
+  @include big-desktop {
+    margin-right: $dinamic-margin;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
   &__list {
     display: flex;
     flex-direction: row;
@@ -40,6 +52,10 @@
 
   &__item:not(:last-child) {
     margin-right: 37px;
+
+    @include big-desktop {
+      margin-right: $dinamic-margin
+    }
   }
 
   &__link {
@@ -60,7 +76,7 @@
   &__title {
     @include open-sans-18;
     line-height: 23px;
-    font-family: 'Vollkorn', 'OpanSans', 'sans-serif';
+    @include ff-vollkorn;
     color: $gray-light;
     transition: color .3s ease-in-out;
   }
@@ -86,4 +102,95 @@
   transform: translateY(-101%);
   transition: transform .3s ease-in-out;
   z-index: 1;
+}
+
+.burger {
+  display: none;
+
+  @include tablet {
+    @include burger;
+  }
+}
+
+
+.burger-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 160px 114px;
+  height: 100vh;
+  background-color: $white;
+  text-align: center;
+  transform: translateX(101%);
+  transition: transform .3s ease-in-out;
+  z-index: 11;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 28px;
+  }
+
+  &__item {
+    @include open-sans-18;
+  }
+
+  &__link {
+    color: $black;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  &__btn {
+    @include btn-primary;
+    color: $black;
+    border-color: $black;
+    margin-bottom: 109px;
+  }
+
+  &__social {
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    width: 23px;
+    height: 23px;
+  }
+
+  &__tel {
+    fill: $white;
+    stroke: $black;
+    stroke-width: 3px;
+  }
+
+  &__cross {
+    position: absolute;
+    top: 31px;
+    right: 31px;
+    width: 30px;
+    height: 30px;
+    stroke: $black;
+  }
+}
+
+.burger-social {
+  &__item:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+.burger-scroll {
+  background-color: $black;
+}
+
+.is-open {
+  transform: none;
 }

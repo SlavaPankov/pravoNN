@@ -4,4 +4,9 @@
   font-weight: 500;
   color: $black;
   text-transform: uppercase;
+
+  @include tablet {
+    font-size: 26px;
+    line-height: 36px;
+  }
 }

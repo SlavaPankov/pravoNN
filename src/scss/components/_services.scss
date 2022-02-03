@@ -31,7 +31,6 @@
   margin-bottom: 70px;
 
   &__slide {
-    width: 370px !important;
     height: 256px !important;
     padding-top: 122px;
     display: flex;
@@ -91,5 +90,11 @@
     height: 65px !important;
     margin-top: 0 !important;
     fill: $gold-arrow !important;
+    z-index: 1 !important;
+
+    @include tablet {
+      width: 46px !important;
+      height: 46px !important;
+    }
   }
 }

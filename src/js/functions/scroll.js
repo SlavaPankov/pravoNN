@@ -4,6 +4,7 @@
     text: 'text-scroll',
     visuallyHidden: 'visually-hidden',
     hide: 'hide',
+    burger: 'burger-scroll',
   }
 
   const header = {
@@ -14,6 +15,7 @@
     logoTitle: document.querySelector('.logo__title'),
     link: document.querySelectorAll('.nav__link'),
     button: document.querySelector('.header__btn'),
+    burger: document?.querySelectorAll('.burger__line'),
   }
 
   function scroll() {
@@ -26,6 +28,9 @@
       item.classList.add(scrollClass.text);
     });
     header.button.classList.add(scrollClass.text);
+    header.burger?.forEach(item => {
+      item?.classList.add(scrollClass.burger);
+    })
   }
 
   function scrollRemove() {
@@ -38,34 +43,54 @@
       item.classList.remove(scrollClass.text);
     });
     header.button.classList.remove(scrollClass.text);
+    header.burger?.forEach(item => {
+      item?.classList.remove(scrollClass.burger);
+    })
   }
 
-  if (pageYOffset > 0) {
+  header.link.forEach(item => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      let href = item.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(href);
+      const topOffset = header.header.offsetHeight;
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - topOffset;
+
+      window.scrollBy({
+        top: offsetPosition,
+        behavior: 'smooth'
+      })
+    })
+  });
+
+  if (window.scrollY > 0) {
     scroll()
   } else {
     scrollRemove()
   }
 
-  let position = pageYOffset;
+  let position = window.scrollY;
   document.addEventListener('scroll', () => {
     clearTimeout(timer);
 
-    if (pageYOffset === 0) {
+    if (window.scrollY === 0) {
       scrollRemove()
     } else {
       scroll()
     }
 
-    if (position < pageYOffset) {
+    if (position < window.scrollY) {
       header.header.classList.add(scrollClass.hide);
-      position = pageYOffset;
+      position = window.scrollY;
     } else {
       header.header.classList.remove(scrollClass.hide);
-      position = pageYOffset;
+      position = window.scrollY;
     }
-    if (pageYOffset === 0) {
+    if (window.scrollY === 0) {
       header.header.classList.remove(scrollClass.hide);
-      position = pageYOffset;
+      position = window.scrollY;
     }
 
     const timer = setTimeout(function () {

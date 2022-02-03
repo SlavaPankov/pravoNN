@@ -3,32 +3,57 @@
   background-size: cover;
 
   &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 236px 165px 237px 722px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 65px;
+    padding: 236px 165px 237px 0;
+
+    @include big-desktop {
+      padding-right: $dinamic-padding;
+    }
+
+    @include tablet {
+      padding-left: 120px;
+      column-gap: 30px;
+    }
   }
 
   &__heading {
+    grid-area: 2 / 7 / 3 / 13;
     max-width: 553px;
     margin-bottom: 29px;
+    @include ff-vollkorn;
     font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
     font-size: 50px;
     line-height: 70px;
     font-weight: 500;
     color: $gold-dark;
     text-transform: uppercase;
+
+    @include tablet {
+      grid-area: 2 / 1 / 3 / 10;
+    }
   }
 
   &__descr {
+    grid-area: 1 / 7 / 2 / 11;
     max-width: 374px;
     margin-bottom: 29px;
     @include open-sans-18;
     color: $white;
+
+    @include tablet {
+      grid-area: 1 / 1 / 2 / 7;
+    }
   }
 
   &__btn {
+    grid-area: 3 / 7 / 4 / 13;
     margin-left: auto;
     @include btn-primary;
+
+    @include tablet {
+      grid-area: 3 / 1 / 4 / 3;
+    }
   }
 }

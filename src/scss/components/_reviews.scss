@@ -4,23 +4,32 @@
     padding-top: 100px;
     padding-bottom: 203px;
 
+    @include tablet {
+      padding-bottom: 85px;
+    }
+
     &::after {
       content: 'Feedback';
       position: absolute;
       top: 206px;
       left: 50%;
       transform: translateX(-50%);
-      font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+      @include ff-vollkorn;
       font-size: 250px;
       line-height: 349px;
       font-weight: 500;
       color: $blue-light;
       z-index: -1;
 
+      @include tablet {
+        font-size: 140px;
+        line-height: 190px;
+      }
     }
   }
 
   &__heading {
+    @include ff-vollkorn;
     @include heading-style;
     line-height: 53px;
     margin-bottom: 157px;
@@ -46,7 +55,7 @@
 
   &__name, &__age {
     @include vollkron-28;
-    font-family: 'OpenSans', 'Vollkorn';
+    @include ff-open-sans;
   }
 
   &__age {
@@ -54,9 +63,9 @@
     margin: 0 auto;
     margin-bottom: 30px;
     padding-bottom: 30px;
-    border-bottom: 1px solid $gold-dark;
+    border-bottom: 2px solid $gold-dark;
   }
-  
+
   &__story, &__final {
     max-width: 1139px;
     margin: 0 auto;
@@ -65,16 +74,30 @@
   &__story {
     @include vollkron-28;
     margin-bottom: 39px;
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
 
   &__final {
     @include vollkron-28;
     font-weight: 600;
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
 
 
   &__navigation {
     max-width: 160px;
     margin: 0 auto;
+
+    @include tablet {
+      max-width: 110px;
+    }
   }
 }

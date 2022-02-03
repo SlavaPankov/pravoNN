@@ -36,7 +36,6 @@ a {
 .site-container {
   position: relative;
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
-  transition: background-color .3s ease-in-out;
 }
 
 .is-hidden {
@@ -91,6 +90,11 @@ a {
   margin: 0 auto;
   padding: 0 $container-offset;
   max-width: $container-width;
+
+  @include big-desktop {
+    max-width: $container-width-1024;
+    padding: 0 $container-offset-1024;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

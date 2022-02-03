@@ -6,52 +6,66 @@
     position: absolute;
     right: 0;
     top: 100px;
-    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+    @include ff-vollkorn;
     font-size: 180px;
     line-height: 250px;
     font-weight: 500;
     color: $blue-light;
     z-index: -1;
+
+    @include tablet {
+      font-size: 110px;
+      line-height: 150px;
+    }
   }
-  
+
   &__container {
     padding-top: 30px;
     padding-bottom: 110px;
+
+    @include tablet {
+      padding-bottom: 75px;
+    }
   }
 
   &__subheading {
     margin-bottom: 17px;
     @include vollkron-28;
-    font-family: 'OpenSans', 'Vollkorn', 'sans-serif';
+    @include ff-open-sans;
     color: $gold;
   }
 
   &__heading {
     margin-bottom: 55px;
     @include heading-style;
-    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+    @include ff-vollkorn;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
   }
 }
 
 .accordion {
   &__heading {
     margin-bottom: 35px;
-    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
-    font-size: 41px;
-    line-height: 58px;
-    font-weight: 400;
-    color: $black;
+    @include ff-vollkorn;
+    @include heading-style;
+    text-transform: none;
   }
 
   &__content {
-    // margin-bottom: 35px;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 0 75px;
     padding-bottom: 70px;
     background-color: $gray-transparent;
-    // transform: translateY(-35px);
+
+    @include tablet {
+      padding: 0 40px;
+      padding-bottom: 50px;
+    }
   }
 
   &__content-heading {
@@ -62,8 +76,12 @@
     padding: 30px 36px 30px 75px;
     @include vollkron-28;
     font-weight: 500;
-    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
+    @include ff-vollkorn;
     background-color: $gray-transparent;
+
+    @include tablet {
+      padding: 23px 40px;
+    }
   }
 
   .mt-35 {
@@ -94,7 +112,7 @@
   &__item-heading {
     margin-bottom: 14px;
     @include vollkron-28;
-    font-family: 'OpenSans', 'Vollkorn', 'sans-serif';
+    @include ff-open-sans;
     color: $gold-dark;
   }
 }

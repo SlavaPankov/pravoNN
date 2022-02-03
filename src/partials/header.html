@@ -40,5 +40,68 @@
     <button class="btn-reset header__btn modal-btn">
       Консультация
     </button>
+    <button class="burger" aria-label="Открыть меню" data-burger>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+    <nav class="burger-nav" title="burger-nav">
+      <svg class="burger-nav__cross">
+        <use xlink:href="img/sprite.svg#cross"></use>
+      </svg>
+      <ul class="burger-nav__list list-reset">
+        <li class="burger-nav__item">
+          <a href="#about" class="burger-nav__link nav__link">
+            О нас
+          </a>
+        </li>
+        <li class="burger-nav__item">
+          <a href="#services" class="burger-nav__link nav__link">
+            Услуги
+          </a>
+        </li>
+        <li class="burger-nav__item">
+          <a href="#reviews" class="burger-nav__link nav__link">
+            Отзывы
+          </a>
+        </li>
+        <li class="burger-nav__item">
+          <a href="#questions" class="burger-nav__link nav__link">
+            Мифы и факты
+          </a>
+        </li>
+        <li class="burger-nav__item">
+          <a href="#contacts" class="burger-nav__link nav__link">
+            Контакты
+          </a>
+        </li>
+      </ul>
+      <button class="btn-reset burger-nav__btn modal-btn">
+        Консультация
+      </button>
+      <ul class="burger-nav__social burger-social  list-reset" title="social">
+        <li class="burger-social__item">
+          <a href="#" target="_blank" class="social__link social__link--fb" aria-label="Наша страничка в Фейсбуке">
+            <svg class="burger-nav__icon burger-nav__tel">
+              <use xlink:href="img/sprite.svg#tel"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="burger-social__item">
+          <a href="#" target="_blank" class="social__link social__link--vk" aria-label="Наша страничка во Вконтакте">
+            <svg class="burger-nav__icon">
+              <use xlink:href="img/sprite.svg#inst"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="burger-social__item">
+          <a href="#" target="_blank" class="social__link social__link--tw" aria-label="Наша страничка в Твиттере">
+            <svg class="burger-nav__icon">
+              <use xlink:href="img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>

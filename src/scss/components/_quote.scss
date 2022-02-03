@@ -6,6 +6,13 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 30px;
+
+    @include tablet {
+      padding: 0 125px;
+      padding-bottom: 70px;
+      grid-template-columns: repeat(8, 1fr);
+      align-items: end;
+    }
   }
 
   &__content {
@@ -13,6 +20,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+
+    @include tablet {
+      grid-area: 1 / 1 / 2 / 9;
+      max-width: 693px;
+    }
   }
 
   &__heading {
@@ -23,13 +35,29 @@
   &__author {
     margin-bottom: 6px;
     @include vollkron-28;
+
+    @include tablet {
+      transform: translateX(-70px);
+    }
   }
 
   &__descr {
     @include open-sans-18;
+
+    @include tablet {
+      max-width: 386px;
+      transform: translateX(-60px);
+    }
   }
 
   &__photo {
     grid-area: 1 / 10 / 2 / 13;
+
+    @include tablet {
+      width: 120px;
+      height: 120px;
+      grid-area: 1 / -1 / 2 / 1;
+      margin-left: auto;
+    }
   }
 }
