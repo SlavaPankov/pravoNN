@@ -13,6 +13,11 @@
     flex-direction: row;
     align-items: center;
     padding: 13px 35px;
+
+    @include mobile {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
   }
 
   &__nav {
@@ -29,6 +34,16 @@
 
   &__logo {
     margin-right: 16px;
+
+    @include tablet {
+      max-width: 74px;
+      max-height: 74px;
+    }
+
+    @include mobile {
+      max-width: 44px;
+      max-height: 44px;
+    }
   }
 }
 
@@ -79,6 +94,17 @@
     @include ff-vollkorn;
     color: $gray-light;
     transition: color .3s ease-in-out;
+    text-transform: none;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__text {
@@ -86,6 +112,17 @@
     line-height: 37px;
     color: $gray-light;
     transition: color .3s ease-in-out;
+    text-transform: uppercase;
+
+    @include tablet {
+      font-size: 26px;
+      line-height: 26px;
+    }
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 25px;
+    }
   }
 }
 
@@ -124,6 +161,11 @@
   transform: translateX(101%);
   transition: transform .3s ease-in-out;
   z-index: 11;
+
+  @include small-tablet {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 
   &__list {
     display: flex;

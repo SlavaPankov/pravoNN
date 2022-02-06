@@ -1,10 +1,16 @@
 $font-family: "OpenSans", sans-serif;
 $content-width: 1170px;
 $content-width-1024: 1300px;
+$content-width-768: 668px;
+$content-width-320: 536px;
 $container-offset: 135px;
-$container-offset-1024: 125px;
+$container-offset-1024: 70px;
+$container-offset-768: 50px;
+$container-offset-320: 20px;
 $container-width: calc($content-width + ($container-offset * 2));
 $container-width-1024: calc($content-width-1024 + ($container-offset-1024 * 2));
+$container-width-768: calc($content-width-768 + ($container-offset-768 * 2));
+$container-width-320: calc($content-width-320 + ($container-offset-320 * 2));
 $dinamic-margin: calc(50px + (62 - 19) * ((100vw - 1440px) / (1920 - 1440)));
 $dinamic-padding: calc(165px + (62 - 19) * ((100vw - 1440px) / (1920 - 1440)));
 $dinamic-margin-bottom: calc(155px + (62 - 19) * ((100vw - 1440px) / (1920 - 1440)));

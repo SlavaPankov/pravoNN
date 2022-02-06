@@ -1,7 +1,7 @@
 
 ymaps.ready(init);
 function init(){
-  const center = [56.30450332437055,43.94258652651555];
+  const center = [56.30447946643729,43.9406767936969];
   // Создание карты.
   var myMap = new ymaps.Map("map", {
     center: center,

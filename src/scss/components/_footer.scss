@@ -2,13 +2,18 @@
   background-color: $black-background;
 
   &__container {
-    padding: 40px 48px;
+    padding: 40px 35px;
     padding-bottom: 37px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__copyright {
@@ -19,6 +24,11 @@
     color: $white;
     margin-top: 24px;
     text-align: center;
+
+    @include mobile {
+      order: 3;
+      // mt0
+    }
   }
 
   &__link {
@@ -48,6 +58,11 @@
   flex-wrap: wrap;
   align-items: center;
 
+  @include mobile {
+    order: 1;
+    margin-bottom: 15px;
+  }
+
   &__item:not(:last-child) {
     margin-right: 48px;
   }
@@ -62,4 +77,20 @@
 .tippy-content {
   padding: 10px 20px !important;
   background-color: $gray-background !important;
+}
+
+.footer__logo {
+  width: 44px;
+  height: 44px;
+
+  @include mobile {
+    margin-right: 10px;
+  }
+}
+
+.logo__footer {
+  @include mobile {
+    order: 2;
+    margin-bottom: 15px;
+  }
 }

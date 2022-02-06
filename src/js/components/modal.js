@@ -47,17 +47,29 @@ function renderModal(contanier) {
     contanier.classList.remove('modal-open');
   });
 
+  contanier.addEventListener('click', (e) => {
+    if (e.target.className === 'modal-bg modal-open') {
+      modal.remove();
+      contanier.classList.remove('modal-open');
+    }
+  });
+  contanier.addEventListener('touchend', (e) => {
+    if (e.target.className === 'modal-bg modal-open') {
+      modal.remove();
+      contanier.classList.remove('modal-open');
+    }
+  });
+
   return modal;
 }
 
 const modalBtn = document.querySelectorAll('.modal-btn');
 const siteContainer = document.querySelector('.modal-bg');
-const visuallyHidden = 'visually-hidden';
 
 modalBtn.forEach(item => {
   item.addEventListener('click', () => {
     const modal = renderModal(siteContainer);
-    modal.style.top = pageYOffset + 200 + 'px';
+    modal.style.top = pageYOffset + 150 + 'px';
 
 
     siteContainer.append(modal);

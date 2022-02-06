@@ -95,6 +95,16 @@ a {
     max-width: $container-width-1024;
     padding: 0 $container-offset-1024;
   }
+
+  @include small-tablet {
+    max-width: $container-width-768;
+    padding: 0 $container-offset-768;
+  }
+
+  @include mobile {
+    max-width: $container-width-320;
+    padding: 0 $container-offset-320;
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

@@ -9,6 +9,11 @@
   transform: translateX(-50%);
   z-index: 3;
 
+  @include mobile {
+    max-width: 320px;
+    padding: 50px 40px;
+  }
+
   &__heading {
     @include heading-style;
     margin-bottom: 10px;
@@ -51,6 +56,11 @@
     height: 18px;
     stroke: $black;
     cursor: pointer;
+
+    @include mobile {
+      width: 14px;
+      height: 14px;
+    }
   }
 
   .modal-form {

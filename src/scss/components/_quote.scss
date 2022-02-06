@@ -8,10 +8,22 @@
     column-gap: 30px;
 
     @include tablet {
-      padding: 0 125px;
+      padding: 0 70px;
       padding-bottom: 70px;
       grid-template-columns: repeat(8, 1fr);
       align-items: end;
+    }
+
+    @include small-tablet {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+
+    @include mobile{
+      padding-top: 20px;
+      padding-right: 20px;
+      padding-bottom: 50px;
+      padding-left: 20px;
     }
   }
 
@@ -22,14 +34,22 @@
     align-items: flex-end;
 
     @include tablet {
+      grid-area: 1 / 1 / 2 / 8;
+    }
+
+    @include mobile {
       grid-area: 1 / 1 / 2 / 9;
-      max-width: 693px;
+      align-items: flex-start
     }
   }
 
   &__heading {
     @include vollkron-28;
     color: $gold-dark;
+
+    @include mobile {
+      margin-bottom: 6px;
+    }
   }
 
   &__author {
@@ -37,7 +57,13 @@
     @include vollkron-28;
 
     @include tablet {
-      transform: translateX(-70px);
+      padding-right: 70px;
+    }
+
+    @include mobile {
+      padding-right: 0;
+      padding-left: 15px;
+      margin-bottom: 15px;
     }
   }
 
@@ -46,7 +72,12 @@
 
     @include tablet {
       max-width: 386px;
-      transform: translateX(-60px);
+      padding-right: 60px;
+    }
+
+    @include mobile {
+      max-width: 230px;
+      padding-right: 0;
     }
   }
 
@@ -56,8 +87,14 @@
     @include tablet {
       width: 120px;
       height: 120px;
-      grid-area: 1 / -1 / 2 / 1;
+      grid-area: 1 / -1 / 2 / -3;
       margin-left: auto;
+    }
+
+    @include mobile {
+      width: 62px;
+      height: 62px;
+      transform: translate(-30px, -30px);
     }
   }
 }

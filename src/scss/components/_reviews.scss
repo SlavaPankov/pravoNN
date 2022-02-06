@@ -8,6 +8,11 @@
       padding-bottom: 85px;
     }
 
+    @include mobile {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
     &::after {
       content: 'Feedback';
       position: absolute;
@@ -25,6 +30,17 @@
         font-size: 140px;
         line-height: 190px;
       }
+
+      @include small-tablet {
+        font-size: 110px;
+        line-height: 150px;
+      }
+
+      @include mobile {
+        top: 146px;
+        font-size: 75px;
+        line-height: 76px;
+      }
     }
   }
 
@@ -33,7 +49,16 @@
     @include heading-style;
     line-height: 53px;
     margin-bottom: 157px;
+
+    @include small-tablet {
+      margin-bottom: 110px;
+    }
+
+    @include mobile {
+      margin-bottom: 70px;
+    }
   }
+
 
   &__text {
     display: block;
@@ -47,10 +72,18 @@
     align-content: center;
     text-align: center;
     margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
   }
 
   &__picture {
     margin-bottom: 26px;
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
   }
 
   &__name, &__age {
@@ -64,6 +97,11 @@
     margin-bottom: 30px;
     padding-bottom: 30px;
     border-bottom: 2px solid $gold-dark;
+
+    @include mobile {
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
   }
 
   &__story, &__final {
@@ -79,6 +117,11 @@
       font-size: 18px;
       line-height: 25px;
     }
+
+    @include small-tablet {
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 
   &__final {
@@ -88,6 +131,11 @@
     @include tablet {
       font-size: 18px;
       line-height: 25px;
+    }
+
+    @include small-tablet {
+      font-size: 16px;
+      line-height: 19px;
     }
   }
 

@@ -9,6 +9,11 @@
     font-size: 16px;
     line-height: 21px;
   }
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 19px;
+  }
 }
 
 @mixin vollkron-28 {
@@ -21,5 +26,10 @@
   @include tablet {
     font-size: 26px;
     line-height: 36px;
+  }
+
+  @include mobile {
+    font-size: 18px;
+    line-height: 21px;
   }
 }

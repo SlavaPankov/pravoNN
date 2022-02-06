@@ -6,6 +6,14 @@
     background: url('../img/about-background-1024.png') right top no-repeat transparent;
   }
 
+  @include small-tablet{
+    background: url('../img/about-background-768.png') right top 25px no-repeat transparent;
+  }
+
+  @include mobile{
+    background: url('../img/about-background-320.png') right top 178px no-repeat transparent;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -17,7 +25,16 @@
     z-index: -1;
 
     @include big-desktop {
+      width: 232px;
       height: 401px;
+    }
+
+    @include small-tablet {
+      width: 214px;
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 
@@ -41,6 +58,17 @@
       line-height: 200px;
       text-align: end;
     }
+
+    @include mobile {
+      top: 178px;
+      left: 0;
+      right: auto;
+      bottom: auto;
+      max-width: 216px;
+      font-size: 55px;
+      line-height: 76px;
+      text-align: left;
+    }
   }
 
   &__container {
@@ -54,6 +82,14 @@
       padding-top: 70px;
       padding-bottom: 90px;
     }
+
+    @include small-tablet {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    @include mobile {
+      padding-bottom: 55px;
+    }
   }
 
   &__subheading {
@@ -62,11 +98,23 @@
     @include vollkron-28;
     @include ff-open-sans;
     color: $gold;
+
+    @include small-tablet {
+      grid-area: 1 / 1 / 2 / 4;
+    }
+
+    @include mobile {
+      grid-area: 1 / 1 / 2 / 7;
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 19px;
+    }
   }
 
   &__heading {
     @include heading-style;
     @include ff-vollkorn;
+
   }
 
   &__heading-1 {
@@ -77,21 +125,56 @@
       grid-area: 2 / 1 / 3 / 7;
       margin-bottom: 50px;
     }
+
+    @include small-tablet {
+      grid-area: 2 / 1 / 3 / 4;
+    }
+
+    @include mobile {
+      grid-area: 2 / 1 / 3 / 7;
+      margin-bottom: 225px;
+    }
   }
 
   &__heading-2 {
+    text-transform: none;
     grid-area: 3 / 1 / 4 / 7;
 
     @include big-desktop {
       grid-area: 4 / 1 / 5 / 7;
     }
+
+    @include small-tablet {
+      grid-area: 4 / 1 / 5 / 5;
+    }
+
+    @include mobile {
+      position: relative;
+      grid-area: 4 / 1 / 5 / 7;
+      margin-bottom: 10px;
+      text-align: center;
+    }
   }
 
   &__heading-3 {
+    text-transform: none;
     grid-area: 3 / 8 / 4 / 13;
 
     @include big-desktop {
       grid-area: 4 / 8 / 5 / 13;
+    }
+
+    @include small-tablet {
+      width: 250px;
+      margin-left: auto;
+      grid-area: 4 / 4 / 5 / 7
+    }
+
+    @include mobile {
+      width: 100%;
+      grid-area: 6 / 1 / 7 / 7;
+      margin-bottom: 10px;
+      text-align: center;
     }
   }
 
@@ -106,6 +189,15 @@
       grid-area: 3 / 1 / 4 / 8;
       margin-bottom: 155px;
     }
+
+    @include small-tablet {
+      grid-area: 3 / 1 / 4 / 6;
+      margin-bottom: 100px;
+    }
+
+    @include mobile {
+      margin-bottom: 70px;
+    }
   }
 
   &__descr-2 {
@@ -113,6 +205,29 @@
 
     @include big-desktop {
       grid-area: 5 / 1 / 6 / 6;
+    }
+
+    @include small-tablet {
+      grid-area: 5 / 1 / 6 / 4;
+    }
+
+    @include mobile {
+      position: relative;
+      grid-area: 5 / 1 / 6 / 7;
+      padding-bottom: 25px;
+      margin-bottom: 16px;
+      // text-align: center;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 45px;
+        height: 2px;
+        background-color: $gold-dark;
+      }
     }
   }
 
@@ -122,5 +237,26 @@
     @include big-desktop {
       grid-area: 5 / 8 / 6 / 13;
     }
+
+    @include small-tablet {
+      max-width: 250px;
+      margin-left: auto;
+      grid-area: 5 / 4 / 6 / 7;
+    }
+
+    @include mobile {
+      max-width: 100%;
+      grid-area: 7 / 1 / 8 / 7;
+      // text-align: center;
+
+    }
   }
+}
+
+.about-text-1 {
+  margin-bottom: 30px;
+}
+
+.text-2 {
+  background: linear-gradient(62.73deg, #F5F5F5 64.6%, rgba(245, 245, 245, 0) 91.29%);
 }
