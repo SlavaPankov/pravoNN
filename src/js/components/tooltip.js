@@ -8,3 +8,9 @@ tippy('.social__icon-tel', {
   allowHTML: true,
   interactive: true,
 });
+
+tippy('.burger-nav__tel', {
+  content: template.innerHTML,
+  allowHTML: true,
+  interactive: true,
+});

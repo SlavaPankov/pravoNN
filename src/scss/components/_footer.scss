@@ -13,6 +13,7 @@
     @include mobile {
       flex-direction: column;
       align-items: center;
+      padding-bottom: 55px;
     }
   }
 
@@ -49,6 +50,10 @@
     color: $white;
     margin-top: 24px;
     text-decoration: underline;
+
+    @include mobile {
+      display: block;
+    }
   }
 }
 
@@ -60,17 +65,37 @@
 
   @include mobile {
     order: 1;
-    margin-bottom: 15px;
+    margin-bottom: 40px;
   }
 
   &__item:not(:last-child) {
     margin-right: 48px;
   }
 
+  &__item:hover .social__icon {
+    fill: $white;
+  }
+
+  &__link:focus {
+    outline: none;
+  }
+
+  &__link:focus .social__icon {
+    fill:  $white;
+  }
+
   &__icon {
     width: 32px;
     height: 32px;
-    fill: $white;
+    fill: $gray-transparent;
+    cursor: pointer;
+    transition: fill .3s ease-in-out;
+
+    &:hover, &:focus {
+      outline: none;
+    }
+
+
   }
 }
 
@@ -80,10 +105,11 @@
 }
 
 .footer__logo {
-  width: 44px;
-  height: 44px;
+  margin-right: 17px;
 
   @include mobile {
+    width: 44px;
+    height: 44px;
     margin-right: 10px;
   }
 }

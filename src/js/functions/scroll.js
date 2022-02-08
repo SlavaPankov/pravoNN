@@ -2,6 +2,7 @@
   const scrollClass = {
     header: 'header-scroll',
     text: 'text-scroll',
+    borderColor: 'border-scroll',
     visuallyHidden: 'visually-hidden',
     hide: 'hide',
     burger: 'burger-scroll',
@@ -28,6 +29,7 @@
       item.classList.add(scrollClass.text);
     });
     header.button.classList.add(scrollClass.text);
+    header.button.classList.add(scrollClass.borderColor);
     header.burger?.forEach(item => {
       item?.classList.add(scrollClass.burger);
     })
@@ -43,6 +45,7 @@
       item.classList.remove(scrollClass.text);
     });
     header.button.classList.remove(scrollClass.text);
+    header.button.classList.remove(scrollClass.borderColor);
     header.burger?.forEach(item => {
       item?.classList.remove(scrollClass.burger);
     })

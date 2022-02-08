@@ -27,7 +27,7 @@ function renderModal(contanier) {
           <input class="modal-form__input modal-form__input-tel input-reset input input-tel" type="tel" data-validate-field="tel" name="Телефон" placeholder="Введите телефон">
         </label>
         <div class="modal__agreement">
-          Нажимая на кнопку "Отправить", вы соглашаетесь на обработку <a href="#" class="modal__link">персональных данных</a>
+          Нажимая на кнопку "Отправить", вы соглашаетесь на обработку <a href="agreement.html" class="modal__link">персональных данных</a>
         </div>
         <button class="button btn-reset modal-form__btn">Отправить</button>
       </form>

@@ -93,6 +93,20 @@
     grid-area: 3 / 1 / 4 / 3;
     @include open-sans-18;
 
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: 2px solid $black;
+    }
+
+    &:active {
+      outline: none;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
     @include tablet {
       margin-bottom: 17px;
     }
@@ -120,6 +134,18 @@
   &__tel {
     @include vollkron-28;
     @include ff-open-sans;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: 2px solid $black;
+    }
+
+    &:active {
+      font-weight: 700;
+    }
   }
 
   &__card {

@@ -8,7 +8,7 @@
 
     @include mobile {
       padding-top: 45px;
-      padding-bottom: 80px;
+      padding-bottom: 62px;
     }
   }
 
@@ -32,6 +32,10 @@
     line-height: 36px;
     color: $black;
     border-color: $black;
+
+    &:focus::after {
+      border-color: $black;
+    }
 
     @include big-desktop {
       max-width: 161px;
@@ -76,22 +80,22 @@
   }
 
   &__slide-1 {
-    background: url('../img/1-services.jpg') center center no-repeat transparent;
+    background: url('../img/1-services.webp') center center no-repeat transparent;
     background-size: cover;
   }
 
   &__slide-2 {
-    background: url('../img/2-services.jpg') center center no-repeat transparent;
+    background: url('../img/2-services.webp') center center no-repeat transparent;
     background-size: cover;
   }
 
   &__slide-3 {
-    background: url('../img/3-services.jpg') center center no-repeat transparent;
+    background: url('../img/3-services.webp') center center no-repeat transparent;
     background-size: cover;
   }
 
   &__slide-4 {
-    background: url('../img/4-services.jpg') center center no-repeat transparent;
+    background: url('../img/4-services.webp') center center no-repeat transparent;
     background-size: cover;
   }
 
@@ -127,6 +131,16 @@
     margin-top: 0 !important;
     fill: $gold-arrow !important;
     z-index: 1 !important;
+    transition: fill .3s ease-in-out;
+
+    &:hover, &:focus {
+      outline: none;
+      fill: $gold !important;
+    }
+
+    &:active {
+      fill: $gold-dark !important;
+    }
 
     &:nth-child(1) {
       margin-right: 30px;

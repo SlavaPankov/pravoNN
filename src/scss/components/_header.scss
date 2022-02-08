@@ -76,10 +76,33 @@
   &__link {
     @include open-sans-18;
     color: $white;
-    transition: color .3s ease-in-out;
+    position: relative;
+    padding: 0 4px;
+    border: 1px solid transparent;
+    transition: border-color .3s ease-in-out, font-weight .3s ease-in-out;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      border-bottom: 1px solid transparent;
+      transition: border-color .3s ease-in-out;
+    }
 
     &:hover {
-      color: #263b69;
+      text-decoration: underline;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $white;
+    }
+
+    &:active, &:active::after {
+      font-weight: 700;
+      text-decoration: none;
     }
   }
 }
@@ -87,6 +110,10 @@
 .logo {
   display: flex;
   align-items: center;
+
+  &:focus {
+    outline: 2px solid $white;
+  }
 
   &__title {
     @include open-sans-18;
@@ -127,11 +154,14 @@
 }
 
 .header-scroll {
-  background-color: $white;
+  background-color: #f5f5f5;
 }
 
 .text-scroll {
   color: $black;
+}
+
+.border-scroll {
   border-color: $black;
 }
 
@@ -165,6 +195,10 @@
   @include small-tablet {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+
+  @include mobile {
+    width: 100vw;
   }
 
   &__list {

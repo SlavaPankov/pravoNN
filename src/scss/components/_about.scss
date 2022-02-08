@@ -1,17 +1,17 @@
 .about {
   position: relative;
-  background: url('../img/about-background.png') right top 25px no-repeat transparent;
+  background: url('../img/about-background.webp') right top 25px no-repeat transparent;
 
   @include big-desktop {
-    background: url('../img/about-background-1024.png') right top no-repeat transparent;
+    background: url('../img/about-background-1024.webp') right top no-repeat transparent;
   }
 
   @include small-tablet{
-    background: url('../img/about-background-768.png') right top 25px no-repeat transparent;
+    background: url('../img/about-background-768.webp') right top 25px no-repeat transparent;
   }
 
   @include mobile{
-    background: url('../img/about-background-320.png') right top 178px no-repeat transparent;
+    background: url('../img/about-background-320.webp') right top 178px no-repeat transparent;
   }
 
   &::before {
@@ -60,7 +60,7 @@
     }
 
     @include mobile {
-      top: 178px;
+      top: 165px;
       left: 0;
       right: auto;
       bottom: auto;
@@ -88,7 +88,8 @@
     }
 
     @include mobile {
-      padding-bottom: 55px;
+      padding-top: 40px;
+      padding-bottom: 32px;
     }
   }
 

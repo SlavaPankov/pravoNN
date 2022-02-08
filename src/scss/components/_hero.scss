@@ -1,5 +1,5 @@
 .hero {
-  background: url('../img/hero-background.jpg') center center no-repeat transparent;
+  background: url('../img/hero-background.webp') center center no-repeat transparent;
   background-size: cover;
 
   &__container {
@@ -53,7 +53,7 @@
     }
 
     @include mobile {
-      grid-auto-flow: 2 / 1 / 3 / 7;
+      grid-area: 2 / 1 / 3 / 7;
       font-size: 25px;
       line-height: 35px;
     }

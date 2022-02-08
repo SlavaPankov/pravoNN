@@ -1,15 +1,46 @@
 @mixin btn-primary {
+  position: relative;
   padding: 13px 17px;
   border: 1px solid $white;
   border-radius: 3px;
   @include open-sans-18;
   color: $white;
-  transition: color .3s ease-in-out, border-color .3s ease-in-out, background-color .3s ease-in-out;
+  transition: font-weight .3s ease-in-out;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid transparent;
+    width: 108%;
+    height: 121%;
+    transition: border-color .3s ease-in-out;
+  }
 
   &:disabled {
     background-color: #586683;
     color: $white;
     opacity: .3;
     cursor: default;
+  }
+
+  &:focus::after {
+    outline: none;
+    border-color: $white;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    outline: none;
+    font-weight: 700;
+  }
+
+  &:active::after {
+    border-color: transparent;
   }
 }
