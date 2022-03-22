@@ -48,9 +48,10 @@ function renderModal(contanier) {
   });
 
   contanier.addEventListener('click', (e) => {
-    if (e.target.className === 'modal-bg modal-open') {
+    const modalBg = document.querySelector('.modal-bg');
+    if (e.target === modalBg) {
       modal.remove();
-      contanier.classList.remove('modal-open');
+      modalBg.classList.remove('modal-open');
     }
   });
   contanier.addEventListener('touchend', (e) => {

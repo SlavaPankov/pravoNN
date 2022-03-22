@@ -40,7 +40,6 @@ try {
   $mail->setFrom('za-pravo52.ru', 'Заявка с сайта'); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('SlavaPank94@yandex.ru');
   $mail->addAddress('Pravo.info.nn@yandex.ru');
 
   // Отправка сообщения

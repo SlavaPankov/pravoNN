@@ -88,10 +88,10 @@
   }
 
   &__accordion-8 {
-    grid-area: 3 / 10 / 4 / 13;
+    grid-area: 3 / 7 / 4 / 10;
 
     @include mobile {
-      grid-area: 5 / 4 / 6 / 7;
+      grid-area: 5 / 1 / 6 / 4;
     }
   }
 }
