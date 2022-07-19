@@ -3,12 +3,12 @@
   top: 0;
   width: 100%;
   background: transparent;
-  transition: background-color .3s ease-in-out;
   z-index: 5;
   transform: translateY(0);
-  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out, background-color .3s ease-in-out;
 
   &__container {
+    max-width: 1720px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -47,7 +47,7 @@
   }
 }
 
-.nav {
+.nav  {
   margin-right: 37px;
 
   @include big-desktop {
@@ -69,7 +69,11 @@
     margin-right: 37px;
 
     @include big-desktop {
-      margin-right: $dinamic-margin
+      margin-right: 25px;
+    }
+
+    @include extra-desktop {
+      margin-right: 15px;
     }
   }
 
@@ -80,6 +84,10 @@
     padding: 0 4px;
     border: 1px solid transparent;
     transition: border-color .3s ease-in-out, font-weight .3s ease-in-out;
+
+    @include extra-desktop {
+      font-size: 16px;
+    }
 
     &::after {
       content: '';

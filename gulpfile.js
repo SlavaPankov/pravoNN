@@ -252,9 +252,10 @@ const htmlInclude = () => {
       prefix: '@',
       basepath: '@file'
     }))
-    .pipe(typograf({
-      locale: ['ru', 'en-US']
-    }))
+    // .pipe(typograf({
+    //   locale: ['ru', 'en-US'],
+    //   disableRule: ['ru/optalign/*']
+    // }))
     .pipe(dest(buildFolder))
     .pipe(browserSync.stream());
 }

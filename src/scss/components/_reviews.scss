@@ -45,9 +45,7 @@
   }
 
   &__heading {
-    @include ff-vollkorn;
     @include heading-style;
-    line-height: 53px;
     margin-bottom: 157px;
 
     @include small-tablet {
@@ -93,8 +91,7 @@
 
   &__age {
     max-width: 85px;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     padding-bottom: 30px;
     border-bottom: 2px solid $gold-dark;
 
@@ -105,12 +102,14 @@
   }
 
   &__story, &__final {
-    max-width: 1139px;
+    max-width: 1235px;
     margin: 0 auto;
   }
 
   &__story {
     @include vollkron-28;
+    @include ff-cormorant;
+    font-weight: 700;
     margin-bottom: 39px;
 
     @include tablet {
@@ -126,7 +125,8 @@
 
   &__final {
     @include vollkron-28;
-    font-weight: 600;
+    @include ff-cormorant;
+    font-weight: 700;
 
     @include tablet {
       font-size: 18px;
@@ -141,11 +141,34 @@
 
 
   &__navigation {
-    max-width: 160px;
+    max-width: 200px;
     margin: 0 auto;
 
     @include tablet {
       max-width: 110px;
     }
   }
+}
+
+.arrow-wrapper {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: $arrow-bg;
+  transition: background-color .3s ease-in-out;
+
+  &:hover {
+    background-color: $gold;
+  }
+}
+
+.arrow-wrapper:first-child {
+  margin-right: 20px;
+}
+
+.reviews-swiper__arrow-bw {
+  transform: rotate(180deg);
 }

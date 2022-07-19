@@ -6,11 +6,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 65px;
-    padding: 236px 165px 237px 0;
-
-    @include big-desktop {
-      padding-right: $dinamic-padding;
-    }
+    padding: 236px 30px 237px;
 
     @include tablet {
       padding-left: 70px;
@@ -22,67 +18,80 @@
     }
 
     @include mobile {
-      padding-top: 112px;
-      padding-right: 20px;
-      padding-bottom: 85px;
-      padding-left: 20px;
+      padding: 112px 20px 85px;
       column-gap: 20px;
     }
   }
 
   &__heading {
-    grid-area: 2 / 7 / 3 / 13;
-    max-width: 553px;
-    margin-bottom: 29px;
+    grid-area: 1 / 1 / 2 / 11;
+    margin-bottom: 10px;
     @include ff-vollkorn;
-    font-family: 'Vollkorn', 'OpenSans', 'sans-serif';
-    font-size: 50px;
-    line-height: 70px;
+    font-size: 70px;
+    line-height: 80px;
     font-weight: 500;
     color: $gold-dark;
     text-transform: uppercase;
 
+    @include big-desktop {
+      grid-area: 1 / 1 / 2 / 9;
+      font-size: 50px;
+      line-height: 60px;
+    }
+
     @include tablet {
-      grid-area: 2 / 1 / 3 / 10;
+      grid-area: 1 / 1 / 2 / 10;
+      font-size: 40px;
+      line-height: 50px;
     }
 
     @include small-tablet {
-      grid-area: 2 / 1 / 3 / 7;
-      font-size: 40px;
-      line-height: 55px;
+      grid-area: 1 / 1 / 2 / 7;
+      font-size: 35px;
+      line-height: 45px;
     }
 
     @include mobile {
-      grid-area: 2 / 1 / 3 / 7;
+      grid-area: 1 / 1 / 2 / 7;
       font-size: 25px;
       line-height: 35px;
     }
   }
 
   &__descr {
-    grid-area: 1 / 7 / 2 / 11;
-    max-width: 374px;
-    margin-bottom: 29px;
+    grid-area: 2 / 1 / 3 / 9;
+    margin-bottom: 30px;
     @include open-sans-18;
+    font-size: 35px;
+    line-height: 40px;
     color: $white;
 
+    @include big-desktop {
+      font-size: 25px;
+      line-height: 30px;
+      grid-area: 2 / 1 / 3 / 7;
+    }
+
     @include tablet {
-      grid-area: 1 / 1 / 2 / 7;
+      grid-area: 2 / 1 / 3 / 7;
+      font-size: 20px;
+      line-height: 25px;
     }
 
     @include small-tablet {
-      grid-area: 1 / 1 / 2 / 5;
+      grid-area: 2 / 1 / 3 / 5;
     }
 
     @include mobile {
-      grid-area: 1 / 1 / 2 / 7;
+      grid-area: 2 / 1 / 3 / 7;
     }
   }
 
   &__btn {
-    grid-area: 3 / 7 / 4 / 13;
-    margin-left: auto;
+    grid-area: 3 / 1 / 4 / 4;
     @include btn-primary;
+    font-size: 25px;
+    line-height: 34px;
 
     @include tablet {
       grid-area: 3 / 1 / 4 / 3;

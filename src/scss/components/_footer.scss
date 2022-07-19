@@ -2,13 +2,9 @@
   background-color: $black-background;
 
   &__container {
-    padding: 40px 35px;
-    padding-bottom: 37px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    padding: 85px 35px 37px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 
     @include mobile {
       flex-direction: column;
@@ -17,8 +13,24 @@
     }
   }
 
+  &__left {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+
+  &__center {
+    grid-area: 1 / 5 / 2 / 8;
+  }
+
+  &__right {
+    grid-area: 1 / -1 / 2 / -3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 55px;
+  }
+
   &__copyright {
-    flex-basis: 100%;
+    //flex-basis: 100%;
     font-size: 12px;
     line-height: 16px;
     font-weight: 300;
@@ -55,9 +67,18 @@
       display: block;
     }
   }
+
+  &__bottom {
+    max-width: 1720px;
+    margin: 0 auto;
+    padding: 60px 35px 30px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .social {
+  padding-right: 23px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -118,5 +139,33 @@
   @include mobile {
     order: 2;
     margin-bottom: 15px;
+  }
+}
+
+.footer-nav {
+  &__link, &__item {
+    font-size: 20px;
+    line-height: 27px;
+    font-weight: 400;
+    color: $white;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.service-nav {
+  padding-top: 10px;
+
+  &__link {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    color: $white;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 22px;
   }
 }

@@ -1,9 +1,9 @@
 .about {
   position: relative;
-  background: url('../img/about-background.webp') right top 25px no-repeat transparent;
+  background: url('../img/about-background.webp') right top 143px no-repeat transparent;
 
   @include big-desktop {
-    background: url('../img/about-background-1024.webp') right top no-repeat transparent;
+    //background: url('../img/about-background-1024.webp') right top no-repeat transparent;
   }
 
   @include small-tablet{
@@ -15,33 +15,41 @@
   }
 
   &::before {
-    content: '';
+    content: 'Because';
     position: absolute;
-    right: 0;
-    top: 0;
-    width: 314px;
-    height: 588px;
-    background-color: $gray-blue;
+    right: 290px;
+    bottom: 250px;
+    @include ff-vollkorn;
+    font-size: 200px;
+    line-height: 279px;
+    font-weight: 500;
+    color: $blue-light;
     z-index: -1;
 
     @include big-desktop {
-      width: 232px;
-      height: 401px;
-    }
-
-    @include small-tablet {
-      width: 214px;
+      right: 0;
+      bottom: -63px;
+      font-size: 110px;
+      line-height: 200px;
+      text-align: end;
     }
 
     @include mobile {
-      display: none;
+      top: 165px;
+      left: 0;
+      right: auto;
+      bottom: auto;
+      max-width: 216px;
+      font-size: 55px;
+      line-height: 76px;
+      text-align: left;
     }
   }
 
   &::after {
-    content: 'Because We Care.';
+    content: 'We Care.';
     position: absolute;
-    right: -45px;
+    right: 0;
     bottom: -45px;
     max-width: 829px;
     @include ff-vollkorn;
@@ -75,8 +83,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 30px;
-    padding-top: 193px;
-    padding-bottom: 171px;
+    padding: 200px 30px 171px;
 
     @include big-desktop {
       padding-top: 70px;
@@ -95,10 +102,16 @@
 
   &__subheading {
     grid-area: 1 / 1 / 2 / 6;
-    margin-bottom: 17px;
-    @include vollkron-28;
     @include ff-open-sans;
+    font-size: 40px;
+    line-height: 55px;
+    font-weight: 400;
     color: $gold;
+
+    @include big-desktop {
+      font-size: 25px;
+      line-height: 35px;
+    }
 
     @include small-tablet {
       grid-area: 1 / 1 / 2 / 4;
@@ -114,13 +127,12 @@
 
   &__heading {
     @include heading-style;
-    @include ff-vollkorn;
-
+    @include ff-cormorant;
   }
 
   &__heading-1 {
     grid-area: 2 / 1 / 3 / 6;
-    margin-bottom: 273px;
+    margin-bottom: 250px;
 
     @include big-desktop {
       grid-area: 2 / 1 / 3 / 7;
@@ -139,7 +151,9 @@
 
   &__heading-2 {
     text-transform: none;
-    grid-area: 3 / 1 / 4 / 7;
+    grid-area: 3 / 1 / 4 / 6;
+    font-size: 40px;
+    line-height: 48px;
 
     @include big-desktop {
       grid-area: 4 / 1 / 5 / 7;
@@ -158,8 +172,11 @@
   }
 
   &__heading-3 {
+    padding-left: 10px;
     text-transform: none;
-    grid-area: 3 / 8 / 4 / 13;
+    grid-area: 3 / 6 / 4 / 13;
+    font-size: 40px;
+    line-height: 48px;
 
     @include big-desktop {
       grid-area: 4 / 8 / 5 / 13;
@@ -184,7 +201,8 @@
   }
 
   &__descr-1 {
-    grid-area: 2 / 6 / 3 / 11;
+    padding-left: 10px;
+    grid-area: 2 / 6 / 3 / 10;
 
     @include big-desktop {
       grid-area: 3 / 1 / 4 / 8;
@@ -202,7 +220,7 @@
   }
 
   &__descr-2 {
-    grid-area: 4 / 1 / 5 / 6;
+    grid-area: 4 / 1 / 5 / 5;
 
     @include big-desktop {
       grid-area: 5 / 1 / 6 / 6;
@@ -233,7 +251,8 @@
   }
 
   &__descr-3 {
-    grid-area: 4 / 8 / 5 / 13;
+    padding-left: 10px;
+    grid-area: 4 / 6 / 5 / 10;
 
     @include big-desktop {
       grid-area: 5 / 8 / 6 / 13;
@@ -252,10 +271,6 @@
 
     }
   }
-}
-
-.about-text-1 {
-  margin-bottom: 30px;
 }
 
 .text-2 {
