@@ -76,7 +76,6 @@
 
   let position = window.scrollY;
   document.addEventListener('scroll', () => {
-    clearTimeout(timer);
 
     if (window.scrollY === 0) {
       scrollRemove()
@@ -85,19 +84,13 @@
     }
 
     if (position < window.scrollY) {
-      header.header.classList.add(scrollClass.hide);
       position = window.scrollY;
     } else {
-      header.header.classList.remove(scrollClass.hide);
       position = window.scrollY;
     }
     if (window.scrollY === 0) {
-      header.header.classList.remove(scrollClass.hide);
       position = window.scrollY;
     }
 
-    const timer = setTimeout(function () {
-      header.header.classList.remove(scrollClass.hide);
-    }, 700)
   });
 })();

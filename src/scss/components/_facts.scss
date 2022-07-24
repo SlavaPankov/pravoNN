@@ -18,6 +18,11 @@
       line-height: 150px;
     }
 
+    @include small-tablet {
+      font-size: 90px;
+      line-height: 100px;
+    }
+
     @include mobile {
       font-size: 55px;
       line-height: 75px;
@@ -30,7 +35,13 @@
     padding-bottom: 110px;
 
     @include tablet {
+      padding-top: 75px;
       padding-bottom: 75px;
+    }
+
+    @include small-tablet {
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     @include mobile {
@@ -71,20 +82,22 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0 75px;
-    padding-bottom: 70px;
+    padding: 0 75px 70px;
     background-color: $gray-transparent;
 
     @include tablet {
-      padding: 0 40px;
-      padding-bottom: 50px;
+      padding: 0 40px 50px;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+      gap: 30px;
     }
 
     @include mobile {
       flex-direction: column;
       margin-bottom: 10px;
-      padding: 0 20px;
-      padding-bottom: 10px;
+      padding: 0 20px 10px;
     }
   }
 
@@ -102,6 +115,16 @@
     background-color: $gray-transparent;
     cursor: pointer;
     transition: background-color .3s ease-in-out;
+
+    @include tablet {
+      font-size: 35px;
+      line-height: 40px;
+    }
+
+    @include small-tablet {
+      font-size: 30px;
+      line-height: 35px;
+    }
 
     &:hover {
      text-decoration: underline;

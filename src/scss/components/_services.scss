@@ -8,11 +8,29 @@
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 200px;
+    font-size: 10.42vw;
     line-height: 300px;
     font-weight: 500;
     @include ff-vollkorn;
     color: $blue-light;
+
+    @include big-desktop {
+      font-size: 150px;
+      line-height: 250px;
+      bottom: 45px;
+    }
+
+    @include tablet {
+      font-size: 11.5vw;
+    }
+
+    @include small-tablet {
+      line-height: 150px;
+    }
+
+    @include mobile {
+      line-height: 50px;
+    }
   }
 
   &__container {
@@ -22,7 +40,17 @@
     grid-template-columns: repeat(12, 1fr);
     column-gap: 30px;
 
+    @include tablet {
+      padding-top: 70px;
+    }
+
+    @include small-tablet {
+      padding-top: 50px;
+      padding-bottom: 75px;
+    }
+
     @include mobile {
+      grid-template-columns: repeat(6, 1fr);
       padding-top: 45px;
       padding-bottom: 62px;
     }
@@ -34,7 +62,12 @@
     @include heading-style;
     @include ff-cormorant;
 
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
     @include mobile {
+      grid-area: 1 / 1 / 2 / 7;
       margin-bottom: 10px;
     }
   }
@@ -76,7 +109,15 @@
   margin-bottom: 70px;
 
   @include mobile {
+    grid-area: 2 / 1 / 3 / 7;
     margin-bottom: 25px;
+  }
+
+  &__slide {
+    @include big-desktop {
+      display: flex;
+      align-items: stretch;
+    }
   }
 }
 
@@ -104,8 +145,7 @@
     }
 
     @include mobile {
-      width: 39px !important;
-      height: 39px !important;
+      width: 25px !important;
     }
   }
 }
@@ -118,10 +158,27 @@
   padding: 90px 59px;
   background-color: $gray-E4;
 
+  @include big-desktop {
+    padding: 90px 35px;
+    //height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  @include mobile {
+    padding: 30px 15px;
+  }
+
   &__head {
     display: flex;
     align-items: center;
     margin-bottom: 56px;
+
+    @include mobile {
+      margin-bottom: 35px;
+    }
   }
 
   &__icon {
@@ -136,11 +193,21 @@
     font-weight: 700;
     color: $black;
     text-transform: uppercase;
+
+    @include big-desktop {
+      max-width: 300px;
+      font-size: 23px;
+      line-height: 28px;
+    }
   }
 
   &__descr {
     @include open-sans-18;
     margin-bottom: 69px;
+
+    @include mobile {
+      margin-bottom: 45px;
+    }
   }
 
   &__link {
@@ -153,6 +220,21 @@
     border: 1px solid $black;
     border-radius: 3px;
     transition: border-color .3s ease-in-out, color .3s ease-in-out, background-color .3s ease-in-out;
+
+    @include big-desktop {
+      display: block;
+      max-width: 180px;
+      margin-top: auto;
+      font-size: 20px;
+      line-height: 25px;
+      padding: 20px 30px;
+    }
+
+    @include mobile {
+      padding: 15px 25px;
+      font-size: 15px;
+      line-height: 20px;
+    }
 
     &::after {
       content: '';

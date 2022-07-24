@@ -46,6 +46,7 @@
 
   &__heading {
     @include heading-style;
+    @include ff-cormorant;
     margin-bottom: 157px;
 
     @include small-tablet {
@@ -147,6 +148,10 @@
     @include tablet {
       max-width: 110px;
     }
+
+    @include mobile {
+      max-width: 130px;
+    }
   }
 }
 
@@ -162,6 +167,16 @@
 
   &:hover {
     background-color: $gold;
+  }
+
+  @include big-desktop {
+    width: 65px;
+    height: 65px;
+  }
+
+  @include tablet {
+    width: 50px;
+    height: 50px;
   }
 }
 

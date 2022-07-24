@@ -3,7 +3,7 @@
   background: url('../img/about-background.webp') right top 143px no-repeat transparent;
 
   @include big-desktop {
-    //background: url('../img/about-background-1024.webp') right top no-repeat transparent;
+    background: url('../img/about-background-1440.webp') right top no-repeat transparent;
   }
 
   @include small-tablet{
@@ -27,11 +27,22 @@
     z-index: -1;
 
     @include big-desktop {
-      right: 0;
-      bottom: -63px;
+      right: 295px;
+      bottom: 200px;
       font-size: 110px;
       line-height: 200px;
       text-align: end;
+    }
+
+    @include tablet {
+      right: 270px;
+      bottom: 200px;
+    }
+
+    @include small-tablet {
+      font-size: 90px;
+      right: 0;
+      bottom: 150px;
     }
 
     @include mobile {
@@ -67,8 +78,12 @@
       text-align: end;
     }
 
+    @include small-tablet {
+      font-size: 90px;
+    }
+
     @include mobile {
-      top: 165px;
+      top: 240px;
       left: 0;
       right: auto;
       bottom: auto;
@@ -83,18 +98,23 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     column-gap: 30px;
-    padding: 200px 30px 171px;
+    padding: 200px 35px 171px;
 
     @include big-desktop {
       padding-top: 70px;
       padding-bottom: 90px;
     }
 
+    @include tablet {
+      grid-template-columns: repeat(10, 1fr);
+    }
+
     @include small-tablet {
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(8, 1fr);
     }
 
     @include mobile {
+      grid-template-columns: repeat(6, 1fr);
       padding-top: 40px;
       padding-bottom: 32px;
     }
@@ -109,8 +129,8 @@
     color: $gold;
 
     @include big-desktop {
-      font-size: 25px;
-      line-height: 35px;
+      font-size: 20px;
+      line-height: 30px;
     }
 
     @include small-tablet {
@@ -131,7 +151,7 @@
   }
 
   &__heading-1 {
-    grid-area: 2 / 1 / 3 / 6;
+    grid-area: 2 / 1 / 3 / 7;
     margin-bottom: 250px;
 
     @include big-desktop {
@@ -139,8 +159,12 @@
       margin-bottom: 50px;
     }
 
+    @include tablet {
+      grid-area: 2 / 1 / 3 / 5;
+    }
+
     @include small-tablet {
-      grid-area: 2 / 1 / 3 / 4;
+      grid-area: 2 / 1 / 3 / 6;
     }
 
     @include mobile {
@@ -156,7 +180,9 @@
     line-height: 48px;
 
     @include big-desktop {
-      grid-area: 4 / 1 / 5 / 7;
+      font-size: 30px;
+      line-height: 35px;
+      grid-area: 4 / 1 / 5 / 5;
     }
 
     @include small-tablet {
@@ -179,13 +205,22 @@
     line-height: 48px;
 
     @include big-desktop {
-      grid-area: 4 / 8 / 5 / 13;
+      grid-area: 4 / 6 / 5 / 10;
+      font-size: 35px;
+      line-height: 40px;
+      padding-left: 0;
+    }
+
+    @include tablet {
+      grid-area: 4 / 5 / 5 / 8;
+      font-size: 30px;
+      line-height: 35px;
     }
 
     @include small-tablet {
       width: 250px;
       margin-left: auto;
-      grid-area: 4 / 4 / 5 / 7
+      grid-area: 4 / 5 / 5 / 9;
     }
 
     @include mobile {
@@ -205,8 +240,13 @@
     grid-area: 2 / 6 / 3 / 10;
 
     @include big-desktop {
-      grid-area: 3 / 1 / 4 / 8;
+      grid-area: 3 / 1 / 4 / 5;
       margin-bottom: 155px;
+      padding-left: 0;
+    }
+
+    @include tablet {
+      grid-area: 3 / 1 / 4 / 5;
     }
 
     @include small-tablet {
@@ -220,10 +260,14 @@
   }
 
   &__descr-2 {
-    grid-area: 4 / 1 / 5 / 5;
+    grid-area: 4 / 1 / 5 / 4;
 
     @include big-desktop {
-      grid-area: 5 / 1 / 6 / 6;
+      grid-area: 5 / 1 / 6 / 5;
+    }
+
+    @include tablet {
+      grid-area: 5 / 1 / 6 / 4;
     }
 
     @include small-tablet {
@@ -251,17 +295,22 @@
   }
 
   &__descr-3 {
-    padding-left: 10px;
     grid-area: 4 / 6 / 5 / 10;
+    padding-left: 10px;
 
     @include big-desktop {
-      grid-area: 5 / 8 / 6 / 13;
+      grid-area: 5 / 6 / 6 / 10;
+      padding-left: 0;
+    }
+
+    @include tablet {
+      grid-area: 5 / 5 / 6 / 8;
     }
 
     @include small-tablet {
       max-width: 250px;
       margin-left: auto;
-      grid-area: 5 / 4 / 6 / 7;
+      grid-area: 5 / 5 / 6 / 9;
     }
 
     @include mobile {
@@ -275,4 +324,11 @@
 
 .text-2 {
   background: linear-gradient(62.73deg, #F5F5F5 64.6%, rgba(245, 245, 245, 0) 91.29%);
+}
+
+.quiz-btn {
+  @include big-desktop {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }

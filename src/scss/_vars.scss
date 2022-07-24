@@ -1,10 +1,10 @@
 $font-family: "OpenSans", sans-serif;
 $content-width: 1530px;
-$content-width-1024: 1300px;
+$content-width-1024: 100%;
 $content-width-768: 668px;
 $content-width-320: 536px;
 $container-offset: 30px;
-$container-offset-1024: 70px;
+$container-offset-1024: 35px;
 $container-offset-768: 50px;
 $container-offset-320: 20px;
 $container-width: calc($content-width + ($container-offset * 2));
