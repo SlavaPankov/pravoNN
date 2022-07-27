@@ -1,0 +1,9 @@
+.about-why {
+  &__description {
+    max-width: 955px;
+
+    @include tablet {
+      max-width: 850px;
+    }
+  }
+}

@@ -126,6 +126,16 @@
       line-height: 35px;
     }
 
+    @include tablet {
+      padding: 23px 40px;
+    }
+
+    @include mobile {
+      padding: 10px 20px;
+      font-size: 20px;
+      line-height: 22px;
+    }
+
     &:hover {
      text-decoration: underline;
     }
@@ -137,16 +147,6 @@
     &:active {
       text-decoration: none;
       font-weight: 700;
-    }
-
-    @include tablet {
-      padding: 23px 40px;
-    }
-
-    @include mobile {
-      padding: 10px 20px;
-      font-size: 16px;
-      line-height: 19px;
     }
   }
 
@@ -193,6 +193,8 @@
 
     @include mobile {
       margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 18px;
     }
   }
 }

@@ -2,6 +2,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 Swiper.use([Navigation, Pagination]);
 
@@ -10,10 +11,9 @@ const slider = new Swiper('.services-slider', {
   slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 30,
-
-  navigation: {
-    nextEl: '.slider-navigation__arrow-fw',
-    prevEl: '.slider-navigation__arrow-bw',
+  pagination: {
+    type: 'bullets',
+    el: '.services-slider__pagination',
   },
 
   breakpoints: {

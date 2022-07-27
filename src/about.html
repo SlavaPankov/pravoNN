@@ -6,9 +6,15 @@
 <body class="page__body">
 <div class="site-container">
   <div class="modal-bg"></div>
-  @include('partials/header.html')
+  @include('partials/header-page.html')
+  @include('partials/breadcrumbs.html')
   <main>
-
+    @include('partials/about-quote.html')
+    @include('partials/about-who.html')
+    @include('partials/about-why.html')
+    @include('partials/about-what.html')
+    @include('partials/request.html')
+    @include('partials/results.html')
   </main>
   @include('partials/footer.html')
 </div>

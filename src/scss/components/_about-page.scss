@@ -1,0 +1,130 @@
+.about-page {
+  .container {
+    padding: 50px 30px;
+
+    @include big-desktop {
+      padding: 50px 120px;
+    }
+
+    @include tablet {
+      padding: 50px 60px;
+    }
+
+    @include small-tablet {
+      padding: 30px 60px 30px;
+    }
+
+    @include mobile {
+      padding: 30px;
+    }
+  }
+
+  &__heading {
+    @include ff-cormorant;
+    font-size: 180px;
+    line-height: 200px;
+    font-weight: 400;
+    color: $black;
+    margin-bottom: 50px;
+
+    @include big-desktop {
+      font-size: 150px;
+      line-height: 170px;
+    }
+
+    @include tablet {
+      font-size: 100px;
+      line-height: 120px;
+      margin-bottom: 30px;
+    }
+
+    @include small-tablet {
+      font-size: 50px;
+      line-height: 80px;
+      margin-bottom: 15px;
+    }
+
+    @include mobile {
+      font-size: 70px;
+      line-height: 80px;
+    }
+  }
+
+  &__description {
+    max-width: 595px;
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 400;
+    color: $black;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+
+  &__paragraph:not(:last-child) {
+    margin-bottom: 1em;
+  }
+
+  &__list {
+    max-width: 965px;
+    padding-bottom: 50px;
+  }
+
+  &__item {
+    @include open-sans-18;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+.style-italic {
+  font-style: italic;
+}
+
+.about-who {
+  position: relative;
+
+  &::after {
+    content: 'About Us';
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 900px;
+    @include ff-vollkorn;
+    font-size: 300px;
+    line-height: 300px;
+    font-weight: 500;
+    text-align: right;
+    color: $blue-light;
+    z-index: -1;
+
+    @include big-desktop {
+      max-width: 800px;
+      font-size: 200px;
+      line-height: 300px;
+    }
+
+    @include tablet {
+      max-width: 600px;
+      font-size: 150px;
+      line-height: 250px;
+    }
+
+    @include small-tablet {
+      font-size: 120px;
+      line-height: 150px;
+      max-width: 400px;
+    }
+
+    @include mobile {
+      font-size: 60px;
+      line-height: 120px;
+      max-width: 225px;
+      top: 50px;
+    }
+  }
+}

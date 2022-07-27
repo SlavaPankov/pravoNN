@@ -1,0 +1,58 @@
+.about-quote {
+  &__container {
+    padding: 150px 30px;
+
+    @include big-desktop {
+      padding: 150px 120px;
+    }
+
+    @include tablet {
+      padding: 75px 60px;
+    }
+
+    @include small-tablet {
+      padding: 65px 60px 30px;
+    }
+
+    @include mobile {
+      padding: 65px 30px;
+    }
+  }
+
+  &__heading {
+    font-size: 60px;
+    line-height: 72px;
+
+    @include big-desktop {
+      font-size: 50px;
+      line-height: 62px;
+    }
+
+    @include small-tablet {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    @include mobile {
+      font-size: 25px;
+      line-height: 35px;
+    }
+  }
+}
+
+.about-single-quote {
+  transform: translate(-30px, 90px);
+
+  @include big-desktop {
+    transform: translate(-30px, 75px);
+  }
+
+  @include tablet {
+    transform: translate(-20px, 60px);
+  }
+
+  @include small-tablet {
+    font-size: 200px;
+    transform: translate(-10px, 40px);
+  }
+}

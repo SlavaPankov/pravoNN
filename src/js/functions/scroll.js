@@ -52,45 +52,49 @@
   }
 
   header.link.forEach(item => {
-    item.addEventListener('click', (e) => {
-      e.preventDefault();
+    if (item.href.indexOf('#') !== -1) {
+      item.addEventListener('click', (e) => {
+        e.preventDefault();
 
-      let href = item.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(href);
-      const topOffset = header.header.offsetHeight;
-      const elementPosition = targetElement.getBoundingClientRect().top;
-      const offsetPosition = elementPosition - topOffset;
+        let href = item.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(href);
+        const topOffset = header.header.offsetHeight;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
 
-      window.scrollBy({
-        top: offsetPosition,
-        behavior: 'smooth'
+        window.scrollBy({
+          top: offsetPosition,
+          behavior: 'smooth'
+        })
       })
-    })
+    }
   });
-
-  if (window.scrollY > 0) {
-    scroll()
-  } else {
-    scrollRemove()
-  }
 
   let position = window.scrollY;
-  document.addEventListener('scroll', () => {
+  if (!document.querySelector('.header-page')) {
 
-    if (window.scrollY === 0) {
-      scrollRemove()
-    } else {
+    if (window.scrollY > 0) {
       scroll()
-    }
-
-    if (position < window.scrollY) {
-      position = window.scrollY;
     } else {
-      position = window.scrollY;
+      scrollRemove()
     }
-    if (window.scrollY === 0) {
-      position = window.scrollY;
-    }
+    document.addEventListener('scroll', () => {
 
-  });
+      if (window.scrollY === 0) {
+        scrollRemove()
+      } else {
+        scroll()
+      }
+
+      if (position < window.scrollY) {
+        position = window.scrollY;
+      } else {
+        position = window.scrollY;
+      }
+      if (window.scrollY === 0) {
+        position = window.scrollY;
+      }
+
+    });
+  }
 })();

@@ -11,11 +11,18 @@
 @import "./components/services";
 @import "./components/quote";
 @import "./components/request";
-// @import "./components/achievement";
 @import "./components/reviews";
 @import "./components/facts";
 @import './components/contacts';
 @import './components/agency';
 @import './components/footer';
 @import './components/agreement';
+
+@import 'components/breadcrumbs';
+
+// Страница about
+@import 'components/about-qoute';
+@import 'components/about-page';
+@import 'components/about-why';
+@import 'components/about-results';
 

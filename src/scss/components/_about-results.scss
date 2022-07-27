@@ -1,0 +1,138 @@
+.results {
+  &__container {
+    padding: 80px 30px 190px;
+
+    @include big-desktop {
+      padding: 80px 120px 190px;
+    }
+
+    @include tablet {
+      padding: 80px 60px 90px;
+    }
+
+    @include mobile {
+      padding: 80px 30px;
+    }
+  }
+
+  &__heading {
+    @include ff-cormorant;
+    font-size: 180px;
+    line-height: 200px;
+    font-weight: 500;
+    color: $black;
+    margin-bottom: 50px;
+
+    @include big-desktop {
+      font-size: 150px;
+      line-height: 170px;
+    }
+
+    @include tablet {
+      font-size: 100px;
+      line-height: 120px;
+    }
+
+    @include small-tablet {
+      font-size: 80px;
+      line-height: 100px;
+      margin-bottom: 20px;
+    }
+
+    @include mobile {
+      font-size: 70px;
+      line-height: 80px;
+    }
+  }
+
+  &__description {
+    max-width: 910px;
+    @include open-sans-18;
+    margin-bottom: 50px;
+
+    @include small-tablet {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.results-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include small-tablet {
+    flex-wrap: wrap;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include small-tablet {
+      flex-basis: 48%;
+    }
+
+    @include mobile {
+      flex-basis: 100%;
+    }
+  }
+
+  &__numeric {
+    flex-basis: 50%;
+    margin-bottom: 25px;
+    @include ff-vollkorn;
+    font-size: 150px;
+    line-height: 200px;
+    font-weight: 500;
+    color: $gray-blue-05;
+    text-align: center;
+
+    @include big-desktop {
+      font-size: 100px;
+      line-height: 150px;
+      margin-bottom: 15px;
+    }
+
+    @include tablet {
+      font-size: 80px;
+      line-height: 130px;
+    }
+  }
+
+  &__description {
+    flex-basis: 75%;
+    text-align: center;
+    @include open-sans-18;
+    color: $gray-blue-05;
+    text-transform: uppercase;
+
+    @include tablet {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.letter {
+  display: inline-flex;
+  align-items: center;
+  @include ff-vollkorn;
+  font-size: 50px;
+  line-height: 70px;
+  font-weight: 500;
+  color: $gray-blue-05;
+  transform: translate(-10px, 25px);
+
+  @include tablet {
+    font-size: 25px;
+    line-height: 35px;
+    transform: translate(-10px, 15px);
+  }
+}

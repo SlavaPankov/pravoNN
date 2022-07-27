@@ -160,7 +160,6 @@
 
   @include big-desktop {
     padding: 90px 35px;
-    //height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -168,7 +167,7 @@
   }
 
   @include mobile {
-    padding: 30px 15px;
+    padding: 30px 30px 35px;
   }
 
   &__head {
@@ -177,7 +176,7 @@
     margin-bottom: 56px;
 
     @include mobile {
-      margin-bottom: 35px;
+      margin-bottom: 5px;
     }
   }
 
@@ -266,5 +265,11 @@
       border-color: $gold-dark;
       color: $white;
     }
+  }
+}
+
+.swiper-pagination-bullet-active {
+  @include mobile {
+    background: $black !important;
   }
 }
