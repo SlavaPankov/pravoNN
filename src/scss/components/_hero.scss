@@ -8,17 +8,27 @@
     column-gap: 65px;
     padding: 236px 35px 237px;
 
+    @include big-desktop {
+      padding: 236px 134px 237px;
+    }
+
+    @include extra-desktop {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
     @include tablet {
       grid-template-columns: repeat(10, 1fr);
       column-gap: 30px;
     }
 
     @include small-tablet {
+      padding: 150px 60px 100px;
       grid-template-columns: repeat(6, 1fr);
     }
 
     @include mobile {
-      padding: 112px 20px 85px;
+      padding: 112px 30px 85px;
       column-gap: 20px;
     }
   }

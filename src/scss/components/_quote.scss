@@ -5,18 +5,28 @@
     grid-template-columns: repeat(12, 1fr);
     column-gap: 30px;
 
+    @include big-desktop {
+      padding-top: 150px;
+      padding-left: 134px;
+      padding-right: 134px;
+    }
+
+    @include extra-desktop {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
     @include tablet {
       padding: 0 35px 70px;
       grid-template-columns: repeat(8, 1fr);
     }
 
     @include small-tablet {
-      padding-right: 50px;
-      padding-left: 50px;
+      padding: 50px 60px;
     }
 
     @include mobile{
-      padding: 20px 20px 77px;
+      padding: 20px 30px 77px;
     }
   }
 
@@ -156,19 +166,23 @@
   font-style: italic;
   transform: translate(-60px, 90px);
 
+  @include big-desktop {
+    transform: translate(-33px, 90px);
+  }
+
   @include tablet {
     font-size: 350px;
-    transform: translate(-50px, 70px);
+    transform: translate(-20px, 70px);
   }
 
   @include small-tablet {
     font-size: 300px;
-    transform: translate(-40px, 60px);
+    transform: translate(-20px, 60px);
   }
 
   @include mobile {
     font-size: 150px;
-    transform: translate(-20px, 25px);
+    transform: translate(-10px, 25px);
   }
 }
 

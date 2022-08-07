@@ -7,12 +7,14 @@ tippy('.social__icon-tel', {
   content: template.innerHTML,
   allowHTML: true,
   interactive: true,
+  placement: 'bottom'
 });
 
 tippy('.burger-nav__tel', {
   content: template.innerHTML,
   allowHTML: true,
   interactive: true,
+  placement: 'bottom'
 });
 
 if (document.querySelector('.agency__map')) {

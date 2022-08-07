@@ -8,7 +8,7 @@
     top: 0;
     @include ff-vollkorn;
     font-size: 180px;
-    line-height: 250px;
+    line-height: 165px;
     font-weight: 500;
     color: $blue-light;
     z-index: -1;
@@ -34,19 +34,26 @@
     padding-top: 135px;
     padding-bottom: 110px;
 
+    @include big-desktop {
+      padding: 95px 134px 110px;
+    }
+
+    @include extra-desktop {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
     @include tablet {
       padding-top: 75px;
       padding-bottom: 75px;
     }
 
     @include small-tablet {
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding: 50px 60px;
     }
 
     @include mobile {
-      padding-bottom: 50px;
-      padding-top: 20px;
+      padding: 20px 30px 50px;
     }
   }
 

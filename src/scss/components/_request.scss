@@ -5,19 +5,41 @@
     padding-top: 80px;
     padding-bottom: 80px;
 
+    @include big-desktop {
+      padding: 80px 134px;
+    }
+
+    @include extra-desktop {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
+    @include small-tablet {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
     @include mobile {
-      padding-top: 30px;
-      padding-bottom: 36px;
+      padding: 30px 30px 36px;
     }
   }
 
   &__heading {
     margin-bottom: 69px;
-    @include ff-vollkorn;
-    font-size: 36px;
-    line-height: 53px;
+    @include ff-cormorant;
+    font-size: 50px;
+    line-height: 50px;
     font-weight: 500;
     color: $white;
+
+    @include big-desktop {
+      margin-bottom: 35px;
+    }
+
+    @include extra-desktop {
+      font-size: 40px;
+      line-height: 40px;
+    }
 
     @include tablet {
       margin-bottom: 35px;
@@ -27,6 +49,8 @@
 
     @include mobile {
       margin-bottom: 13px;
+      font-size: 20px;
+      line-height: 25px;
     }
   }
 
@@ -40,6 +64,11 @@
     font-weight: 400;
     color: $white;
     opacity: .42;
+
+    @include mobile {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 
   &__link {

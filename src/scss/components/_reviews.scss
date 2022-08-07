@@ -4,13 +4,26 @@
     padding-top: 100px;
     padding-bottom: 203px;
 
+    @include big-desktop {
+      padding: 100px 134px 150px;
+    }
+
+    @include extra-desktop {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
     @include tablet {
       padding-bottom: 85px;
     }
 
+    @include small-tablet {
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+
     @include mobile {
-      padding-top: 60px;
-      padding-bottom: 60px;
+      padding: 60px 30px;
     }
 
     &::after {
@@ -144,6 +157,10 @@
   &__navigation {
     max-width: 200px;
     margin: 0 auto;
+
+    @include big-desktop {
+      max-width: 155px;
+    }
 
     @include tablet {
       max-width: 110px;

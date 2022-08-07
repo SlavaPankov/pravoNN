@@ -13,8 +13,6 @@
 @import "./components/request";
 @import "./components/reviews";
 @import "./components/facts";
-@import './components/contacts';
-@import './components/agency';
 @import './components/footer';
 @import './components/agreement';
 
@@ -26,3 +24,9 @@
 @import 'components/about-why';
 @import 'components/about-results';
 
+// Страница contacts
+@import './components/contacts';
+@import './components/agency';
+
+// Страница cooperation
+@import "./components/cooperation";

@@ -3,11 +3,11 @@
   background: url('../img/about-background.webp') right top 143px no-repeat transparent;
 
   @include big-desktop {
-    background: url('../img/about-background-1440.webp') right top no-repeat transparent;
+    background: url('../img/about-background-1440.webp') right top 70px no-repeat transparent;
   }
 
   @include small-tablet{
-    background: url('../img/about-background-768.webp') right top 25px no-repeat transparent;
+    background: url('../img/about-background-768.webp') right top 70px no-repeat transparent;
   }
 
   @include mobile{
@@ -27,10 +27,10 @@
     z-index: -1;
 
     @include big-desktop {
-      right: 295px;
+      right: 260px;
       bottom: 200px;
       font-size: 110px;
-      line-height: 200px;
+      line-height: 120px;
       text-align: end;
     }
 
@@ -41,12 +41,12 @@
 
     @include small-tablet {
       font-size: 90px;
-      right: 0;
-      bottom: 150px;
+      right: 190px;
+      bottom: 197px;
     }
 
     @include mobile {
-      top: 165px;
+      top: 150px;
       left: 0;
       right: auto;
       bottom: auto;
@@ -72,7 +72,7 @@
 
     @include big-desktop {
       right: 0;
-      bottom: -63px;
+      bottom: -45px;
       font-size: 110px;
       line-height: 200px;
       text-align: end;
@@ -83,7 +83,7 @@
     }
 
     @include mobile {
-      top: 240px;
+      top: 225px;
       left: 0;
       right: auto;
       bottom: auto;
@@ -101,8 +101,12 @@
     padding: 200px 35px 171px;
 
     @include big-desktop {
-      padding-top: 70px;
-      padding-bottom: 90px;
+      padding: 70px 134px 90px;
+    }
+
+    @include extra-desktop {
+      padding-left: 100px;
+      padding-right: 100px;
     }
 
     @include tablet {
@@ -111,12 +115,13 @@
 
     @include small-tablet {
       grid-template-columns: repeat(8, 1fr);
+      padding-left: 60px;
+      padding-right: 60px;
     }
 
     @include mobile {
       grid-template-columns: repeat(6, 1fr);
-      padding-top: 40px;
-      padding-bottom: 32px;
+      padding: 40px 30px 32px;
     }
   }
 
@@ -155,7 +160,7 @@
     margin-bottom: 250px;
 
     @include big-desktop {
-      grid-area: 2 / 1 / 3 / 7;
+      grid-area: 2 / 1 / 3 / 9;
       margin-bottom: 50px;
     }
 
@@ -240,7 +245,7 @@
     grid-area: 2 / 6 / 3 / 10;
 
     @include big-desktop {
-      grid-area: 3 / 1 / 4 / 5;
+      grid-area: 3 / 1 / 4 / 6;
       margin-bottom: 155px;
       padding-left: 0;
     }
@@ -328,6 +333,7 @@
 
 .quiz-btn {
   @include big-desktop {
+    max-width: 200px;
     font-size: 20px;
     line-height: 25px;
   }

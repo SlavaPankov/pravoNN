@@ -6,6 +6,15 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
 
+    @include big-desktop {
+      padding: 85px 134px 37px;
+    }
+
+    @include extra-desktop {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+
     @include tablet {
       padding-top: 50px;
       padding-bottom: 15px;
@@ -14,10 +23,14 @@
     @include small-tablet {
       grid-template-columns: repeat(8, 1fr);
       row-gap: 25px;
+      padding-left: 60px;
+      padding-right: 60px;
     }
 
     @include mobile {
       grid-template-columns: repeat(6, 1fr);
+      padding-right: 30px;
+      padding-left: 30px;
     }
   }
 
@@ -218,6 +231,6 @@
   }
 
   &__item:not(:last-child) {
-    margin-bottom: 22px;
+    margin-bottom: 15px;
   }
 }

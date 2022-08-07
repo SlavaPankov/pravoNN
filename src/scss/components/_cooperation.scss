@@ -1,0 +1,203 @@
+.cooperation {
+  position: relative;
+  background: url('../img/cooperation-bg.webp') right top 570px no-repeat transparent;
+
+  @include big-desktop {
+    background-size: 66%;
+    background-position-y: 550px;
+  }
+
+  @include tablet {
+    background-position-y: 200px;
+  }
+
+  @include small-tablet {
+    background-position-y: 160px;
+  }
+
+  @include mobile {
+    background-size: 70%;
+    background-position-y: 110px;
+  }
+
+  &::before {
+    content: 'Cooperation Options';
+    position: absolute;
+    top: 955px;
+    right: 0;
+    @include ff-vollkorn;
+    font-size: 180px;
+    line-height: 180px;
+    font-weight: 500;
+    color: $blue-light;
+    max-width: 1000px;
+    text-align: right;
+    z-index: -1;
+
+    @include big-desktop {
+      top: 870px;
+      font-size: 150px;
+      line-height: 150px;
+    }
+
+    @include extra-desktop {
+      top: 800px;
+    }
+
+    @include tablet {
+      top:470px;
+      font-size: 10.83vw;
+      line-height: 10.83vw;
+    }
+
+    @include mobile {
+      top: 360px;
+      font-size: 13.89vw;
+      line-height: 13.89vw;
+    }
+  }
+
+  &::after {
+    content: 'Cooperation';
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include ff-vollkorn;
+    font-size: 180px;
+    line-height: 115px;
+    font-weight: 500;
+    color: $blue-light;
+
+    @include big-desktop {
+      font-size: 150px;
+      line-height: 120px;
+    }
+
+    @include tablet {
+      font-size: 10.83vw;
+      line-height: 6.67vw;
+    }
+
+    @include mobile {
+      font-size: 13.89vw;
+      line-height: 7.89vw;
+    }
+  }
+
+  &__container {
+    position: relative;
+    padding-top: 300px;
+    padding-bottom: 262px;
+
+    @include big-desktop {
+      padding: 200px 120px;
+    }
+
+    @include tablet {
+      padding: 150px 60px;
+    }
+
+    @include small-tablet {
+      padding: 100px 60px;
+    }
+
+    @include mobile {
+      padding: 100px 30px;
+    }
+  }
+
+  &__heading {
+    @include ff-cormorant;
+    margin-bottom: 70px;
+    font-size: 180px;
+    line-height: 150px;
+    font-weight: 400;
+    color: $black;
+
+    @include big-desktop {
+      font-size: 150px;
+      line-height: 120px;
+    }
+
+    @include tablet {
+      font-size: 10.83vw;
+      line-height: 9.17vw;
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      font-size: 11.76vw;
+      line-height: 10.59vw;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    @include open-sans-18;
+  }
+
+  &__description {
+    max-width: 855px;
+
+    @include tablet {
+      max-width: 650px;
+    }
+  }
+
+  &__block--first .cooperation__description {
+    max-width: 768px;
+
+    @include tablet {
+      max-width: 568px;
+    }
+  }
+
+  &__block--first {
+    padding-bottom: 278px;
+
+    @include tablet {
+      padding-bottom: 100px;
+    }
+  }
+
+  &__block--second {
+    padding-bottom: 70px;
+
+    @include tablet {
+      padding-bottom: 50px;
+    }
+
+    @include mobile {
+      padding-bottom: 30px;
+    }
+  }
+
+
+  &__block--third {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    @include tablet {
+      padding: 50px 0;
+    }
+
+    @include mobile {
+      padding: 30px 0;
+    }
+  }
+
+  &__block--fourth {
+    padding-top: 70px;
+
+    @include tablet {
+      padding-top: 50px;
+    }
+
+    @include mobile {
+      padding-top: 30px;
+    }
+  }
+}
