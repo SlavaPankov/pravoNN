@@ -4,45 +4,48 @@ import JustValidate from "just-validate";
 let selector = document.querySelector('input[type="tel"]');
 let im = new Inputmask('+7 (999)-999-99-99');
 
-im.mask(selector);
+if (selector) {
+  im.mask(selector);
+}
 
 const form  = document.querySelector('.form-main');
 
-const validation = new JustValidate(form);
+if (form) {
+  const validation = new JustValidate(form);
 
-validation
-  .addField('.input-name', [
-    {
-      rule: 'minLength',
-      value: 3,
-      errorMessage: 'Слишком короткое имя'
-    },
-    {
-      rule: 'maxLength',
-      value: 30,
-      errorMessage: 'Слишком длинное имя'
-    },
-    {
-      rule: 'required',
-      value: true,
-      errorMessage: 'Введите имя'
-    }
-  ])
-  .addField('.input-tel', [
-    {
-      rule: 'required',
-      value: true,
-      errorMessage: 'Введите телефон',
-    },
-    {
-      rule: 'function',
-      validator: function() {
-        const phone = selector.inputmask.unmaskedvalue();
-        return phone.length === 10;
+  validation
+    .addField('.input-name', [
+      {
+        rule: 'minLength',
+        value: 3,
+        errorMessage: 'Слишком короткое имя'
       },
-      errorMessage: 'Введите корректный телефон',
-    },
-  ]).onSuccess((event) => {
+      {
+        rule: 'maxLength',
+        value: 30,
+        errorMessage: 'Слишком длинное имя'
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите имя'
+      }
+    ])
+    .addField('.input-tel', [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите телефон',
+      },
+      {
+        rule: 'function',
+        validator: function() {
+          const phone = selector.inputmask.unmaskedvalue();
+          return phone.length === 10;
+        },
+        errorMessage: 'Введите корректный телефон',
+      },
+    ]).onSuccess((event) => {
     console.log('Validation passes and form submitted', event);
 
     let formData = new FormData(event.target);
@@ -64,3 +67,4 @@ validation
 
     event.target.reset();
   });
+}

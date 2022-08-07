@@ -120,6 +120,10 @@
 
   &__item:not(:last-child) {
     margin-right: 48px;
+
+    @include mobile {
+      margin-right: 20px;
+    }
   }
 
   &__item:hover .social__icon {

@@ -166,6 +166,10 @@
     align-items: flex-start;
   }
 
+  @include small-tablet {
+    padding: 30px 30px;
+  }
+
   @include mobile {
     padding: 30px 30px 35px;
   }
@@ -197,6 +201,11 @@
       max-width: 300px;
       font-size: 23px;
       line-height: 28px;
+    }
+
+    @include small-tablet {
+      font-size: 20px;
+      line-height: 25px;
     }
   }
 

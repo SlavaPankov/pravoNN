@@ -1,150 +1,177 @@
 .agency {
-  background-color: $black-background;
+  padding-bottom: 108px;
+
+  @include tablet {
+    padding-bottom: 75px;
+  }
+
+  @include small-tablet {
+    padding-bottom: 50px;
+  }
+
   &__container {
-    padding-top: 55px;
-    padding-bottom: 40px;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 30px;
+    padding-top: 180px;
+
+    @include tablet {
+      padding-top: 100px;
+    }
+
+    @include small-tablet {
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-top: 50px;
+    }
 
     @include mobile {
-      padding-top: 50px;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 20px 15px;
-      padding-bottom: 60px;
+      padding: 40px 30px 0;
     }
   }
 
   &__heading {
-    grid-area: 1 / 1 / 2 / 5;
-    margin-bottom: 55px;
-    @include ff-vollkorn;
-    font-size: 28px;
-    font-weight: 500;
-    line-height: 39px;
-    color: $white;
-    text-transform: uppercase;
+    @include ff-cormorant;
+    font-size: 180px;
+    line-height: 150px;
+    font-weight: 400;
+    color: $black;
+
+    @include big-desktop {
+      font-size: 150px;
+    }
+
+    @include tablet {
+      font-size: 100px;
+      line-height: 120px;
+    }
+
+    @include small-tablet {
+      font-size: 9.41vw;
+      line-height: 9.41vw;
+      margin-bottom: 75px;
+    }
 
     @include mobile {
       margin-bottom: 10px;
-      grid-area: 1 / 1 / 2 / 7;
+      font-size: 10.42vw;
+      line-height: 10.42vw;
     }
   }
 
-  &__accordion-1 {
-    grid-area: 2 / 1 / 3 / 4;
-
-    @include mobile {
-      grid-area: 2 / 1 / 3 / 4;
-    }
+  &__image {
+    display: block;
+    margin: 0 auto;
   }
 
-  &__accordion-2 {
-    grid-area: 2 / 4 / 3 / 7;
-
-    @include mobile {
-      grid-area: 2 / 4 / 3 / 7;
-    }
-  }
-
-  &__accordion-3 {
-    grid-area: 2 / 7 / 3 / 10;
-
-    @include mobile {
-      grid-area: 3 / 1 / 4 / 4;
-    }
-  }
-
-  &__accordion-4 {
-    grid-area: 2 / 10 / 3 / 13;
-
-    @include mobile {
-      grid-area: 3 / 4 / 4 / 7 ;
-    }
-  }
-
-  &__accordion-5 {
-    grid-area: 3 / 1 / 4 / 4;
-
-    @include mobile {
-      grid-area: 4 / 1 / 5 / 4;
-    }
-  }
-
-  &__accordion-6 {
-    grid-area: 3 / 4 / 4 / 7;
-
-    @include mobile {
-      grid-area: 4 / 4 / 5 / 7;
-    }
-  }
-
-  &__accordion-7 {
-    grid-area: 3 / 7 / 4 / 10;
-
-    @include mobile {
-      grid-area: 5 / 1 / 6 / 4;
-    }
-  }
-
-  &__accordion-8 {
-    grid-area: 3 / 7 / 4 / 10;
-
-    @include mobile {
-      grid-area: 5 / 1 / 6 / 4;
-    }
-  }
-}
-
-.agency-accordion {
-  &__heading {
-    display: inline-block;
-    margin-bottom: 10px;
-    @include open-sans-18;
-    font-weight: 500;
-    color: $white;
-    cursor: pointer;
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &:focus {
-      outline: 2px solid $white;
-    }
-
-    &:active {
-      font-weight: 700;
-    }
-  }
-}
-
-.content {
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  &__item, &__address, &__tel, &__email {
-    @include open-sans-18;
-    font-size: 14px;
-    font-style: normal;
-    color: $white;
+  &__map {
+    position: relative;
 
     @include small-tablet {
-      font-size: 14px;
-      line-height: 19px;
+      display: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 2.86vw;
+    height: 4.58vw;
+  }
+
+  &__icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    counter-reset: counter;
+    list-style-type: none;
+  }
+}
+
+.moscow {
+  top: 33%;
+  left: 13%;
+}
+
+.chelabinsk {
+  top: 57%;
+  left: 26%;
+}
+
+.cheboksary {
+  top: 42.5%;
+  left: 20.2%;
+}
+
+.chita {
+  top: 75%;
+  left: 67%;
+}
+
+.rostov {
+  top: 50.5%;
+  left: 6.5%;
+}
+
+.agency-info {
+  display: none;
+  padding: 18px 60px;
+  flex-direction: column;
+  //background: $white;
+  border-radius: 10px;
+
+  @include small-tablet {
+    display: flex;
+  }
+
+  @include mobile {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  &__heading {
+    @include ff-cormorant;
+    font-size: 54px;
+    line-height: 65px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: $black;
+
+    @include small-tablet {
+      font-size: 40px;
+      line-height: 50px;
     }
 
     @include mobile {
-      font-size: 12px;
-      line-height: 16px;
+      font-size: 30px;
+      line-height: 40px;
     }
   }
 
-  &__item:not(:last-child) {
-    margin-bottom: 8px;
+  &__name {
+    @include open-sans-18;
+    margin-bottom: 5px;
   }
+
+  &__link {
+    display: block;
+    @include open-sans-18;
+    font-weight: 700;
+  }
+
+  &__address {
+    margin-bottom: 5px;
+    @include open-sans-18;
+    font-style: normal;
+  }
+}
+
+.tippy-box[data-theme~='custom-white'] {
+  border-radius: 10px;
+  background-color: $white;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }

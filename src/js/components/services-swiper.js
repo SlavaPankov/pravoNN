@@ -11,22 +11,19 @@ const slider = new Swiper('.services-slider', {
   slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 30,
-  pagination: {
-    type: 'bullets',
-    el: '.services-slider__pagination',
-  },
+
 
   breakpoints: {
     576: {
-      slidesPerGroup: 2,
+      slidesPerGroup: 1,
       slidesPerView: 1,
-      spaceBetween: 30,
+      spaceBetween: 15,
     },
 
     768: {
       slidesPerGroup: 1,
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 15,
     },
 
     1440: {
