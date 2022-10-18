@@ -18,55 +18,20 @@ tippy('.burger-nav__tel', {
 });
 
 if (document.querySelector('.agency__map')) {
-  const moscowTemplate = document.querySelector('.moscow-info');
-  const chelabinskTemplate = document.querySelector('.chelabinsk-info');
-  const rostovTemplate = document.querySelector('.rostov-info');
-  const cheboksaryTemplate = document.querySelector('.cheboksary-info');
-  const chitaTemplate = document.querySelector('.chita-info');
+  const content = document.querySelectorAll('.agency-info');
+  const marker = document.querySelectorAll('.agency__icon');
 
-  tippy('.moscow', {
-    content: moscowTemplate.innerHTML,
-    allowHTML: true,
-    interactive: true,
-    theme: 'custom-white',
-    placement: 'bottom-start',
-    arrow: false
-  });
 
-  tippy('.chelabinsk', {
-    content: chelabinskTemplate.innerHTML,
-    allowHTML: true,
-    interactive: true,
-    theme: 'custom-white',
-    placement: 'bottom-start',
-    arrow: false
-  });
+  for (let i = 0; i < marker.length; i++) {
+    tippy(marker[i], {
+      content: content[i].innerHTML,
+      allowHTML: true,
+      interactive: true,
+      theme: 'custom-white',
+      placement: 'bottom-start',
+      arrow: false
+    })
+  }
 
-  tippy('.cheboksary', {
-    content: cheboksaryTemplate.innerHTML,
-    allowHTML: true,
-    interactive: true,
-    theme: 'custom-white',
-    placement: 'bottom-start',
-    arrow: false
-  });
-
-  tippy('.chita', {
-    content: chitaTemplate.innerHTML,
-    allowHTML: true,
-    interactive: true,
-    theme: 'custom-white',
-    placement: 'bottom-start',
-    arrow: false
-  });
-
-  tippy('.rostov', {
-    content: rostovTemplate.innerHTML,
-    allowHTML: true,
-    interactive: true,
-    theme: 'custom-white',
-    placement: 'bottom-start',
-    arrow: false
-  });
 
 }

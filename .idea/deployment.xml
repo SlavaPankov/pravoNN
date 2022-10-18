@@ -23,7 +23,28 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="MebelNado">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Nizhtent">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="ReMo">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="ZaPravo">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

@@ -54,18 +54,20 @@
   header.link.forEach(item => {
     if (item.href.indexOf('#') !== -1) {
       item.addEventListener('click', (e) => {
-        e.preventDefault();
+        if (location.pathname === '/') {
+          e.preventDefault();
 
-        let href = item.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(href);
-        const topOffset = header.header.offsetHeight;
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition - topOffset;
+          let href = item.getAttribute('href').substring(2);
+          const targetElement = document.getElementById(href);
+          const topOffset = header.header.offsetHeight;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition - topOffset;
 
-        window.scrollBy({
-          top: offsetPosition,
-          behavior: 'smooth'
-        })
+          window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth'
+          })
+        }
       })
     }
   });

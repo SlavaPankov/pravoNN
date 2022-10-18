@@ -147,10 +147,6 @@ function init() {
         balloonLayout: MyBalloonLayout,
         balloonContentLayout: MyBalloonContentLayout,
         balloonPanelMaxMapArea: 0
-        // Не скрываем иконку при открытом балуне.
-        // hideIconOnBalloonOpen: false,
-        // И дополнительно смещаем балун, для открытия над иконкой.
-        // balloonOffset: [3, -40]
       });
 
     myMap.geoObjects.add(myPlacemark);
