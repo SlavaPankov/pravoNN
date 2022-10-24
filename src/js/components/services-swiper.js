@@ -1,17 +1,20 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation } from 'swiper';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
-Swiper.use([Navigation, Pagination]);
 
-const slider = new Swiper('.services-slider', {
+new Swiper('.services-slider', {
+  modules: [Navigation],
   direction: 'horizontal',
   slidesPerView: 1,
   slidesPerGroup: 1,
   spaceBetween: 30,
 
+  navigation: {
+    prevEl: '.arrow-wrapper__prev',
+    nextEl: '.arrow-wrapper__next'
+  },
 
   breakpoints: {
     576: {
@@ -27,10 +30,9 @@ const slider = new Swiper('.services-slider', {
     },
 
     1440: {
-      slidesPerView: 3,
+      slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 30,
     }
-
   }
 })

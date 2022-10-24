@@ -2,7 +2,7 @@ import Inputmask from "inputmask";
 import JustValidate from "just-validate";
 
 let selector = document.querySelector('input[type="tel"]');
-let im = new Inputmask('+7 (999)-999-99-99');
+let im = new Inputmask('9 (999)-999-99-99');
 
 if (selector) {
   im.mask(selector);
